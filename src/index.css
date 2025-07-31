@@ -30,4 +30,5 @@
 }
 body {
 	@apply font-inter-500;
+	background-color: #f5f5f5;
 }

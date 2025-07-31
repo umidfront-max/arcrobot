@@ -12,41 +12,59 @@ function Header() {
 	const closeMenu = () => setIsMenuOpen(false);
 
 	return (
-		<header className="container1">
-			<nav className="flex justify-between items-center">
-				<NavLink
-					className="font-inter-600 text-xl relative z-50"
-					to="/"
-					onClick={closeMenu}
-				>
-					arcrobot
-				</NavLink>
+		<>
+			<header className="container1">
+				<nav className="flex justify-between items-center">
+					<NavLink
+						className="font-inter-600 text-xl relative z-50"
+						to="/"
+						onClick={closeMenu}
+					>
+						arcrobot
+					</NavLink>
 
-				<NavLink className="font-inter-600" to="/catalog" onClick={closeMenu}>
-					Каталог
-				</NavLink>
-				<NavLink className="font-inter-600" to="/blog" onClick={closeMenu}>
-					Блог
-				</NavLink>
-				<NavLink className="font-inter-600" to="/contact" onClick={closeMenu}>
-					Контакты
-				</NavLink>
-				<div>
-					<p>info@arcrobot.ru </p>
-					<p>8(812)750 85 00</p>
-				</div>
+					<NavLink
+						className="font-inter-600"
+						to="/catalog"
+						onClick={closeMenu}
+					>
+						Каталог
+					</NavLink>
+					<NavLink
+						className="font-inter-600"
+						to="/blog"
+						onClick={closeMenu}
+					>
+						Блог
+					</NavLink>
+					<NavLink
+						className="font-inter-600"
+						to="/contact"
+						onClick={closeMenu}
+					>
+						Контакты
+					</NavLink>
+					<div>
+						<p>info@arcrobot.ru </p>
+						<p>8(812)750 85 00</p>
+					</div>
 
-				<BurgerMenu isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} closeMenu={closeMenu} />
-			</nav>
+					<BurgerMenu
+						isOpen={isMenuOpen}
+						setIsOpen={setIsMenuOpen}
+						closeMenu={closeMenu}
+					/>
+				</nav>
 
-			<TransitionOverlay />
+				<TransitionOverlay />
+			</header>
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/catalog" element={<Catalog />} />
 				<Route path="/blog" element={<Blog />} />
 				<Route path="/contact" element={<Contact />} />
 			</Routes>
-		</header>
+		</>
 	);
 }
 

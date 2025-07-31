@@ -20,7 +20,7 @@ export default {
          success: "#25C418",
          white: "#ffffff",
          green: "#20a512",
-         gray: "#9DA3BB",
+         gray: "#090909",
          "gray-600": "#F2F4F7",
          "gray-500": "#ccc",
          "gray-200": "#F8F9FB",

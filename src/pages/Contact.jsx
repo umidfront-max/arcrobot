@@ -1,7 +1,13 @@
-import React from "react";
+import ContactInfo from '../components/contact/ContactInfo';
+import HeroContact from '../components/contact/HeroContact';
 
 function Contact() {
-	return <div>Contact</div>;
+	return (
+		<div>
+			<HeroContact />
+			<ContactInfo />
+		</div>
+	);
 }
 
 export default Contact;
