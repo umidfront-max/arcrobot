@@ -3,7 +3,15 @@
 	width: 100%;
 	margin: 0 auto;
 	padding: 0px 30px;
+	@media (max-width: 576px) {
+		padding: 0px 20px;
+	}
 }
+.swiper-slide-thumb-active1 {
+	border: 2px solid #0f2fbd; /* qora border */
+	border-radius: 8px; /* yumaloqligi thumbnail bilan mos */
+}
+
 .transition-overlay {
 	position: fixed;
 	top: 0;
@@ -13,10 +21,16 @@
 	background-color: black;
 	z-index: 9999;
 }
-.objj0 {
+* {
+	letter-spacing: -0.04em;
+}
+/* .objj0 {
 	object-position: center top;
 	object-position: left -144px;
-}
+	@media (max-width: 576px) {
+		object-position: left -64px;
+	}
+} */
 /* .active {
 	border-radius: 10px;
 	padding: 4px 10px;

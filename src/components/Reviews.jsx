@@ -30,7 +30,7 @@ const avatarImages = [
 const Reviews = () => {
 	return (
 		<div className="bg-gray-100 min-h-screen container1 py-16">
-			<div className="grid grid-cols-4">
+			<div className="grid grid-cols-4 max-sm:grid-cols-1">
 				{/* Why Us */}
 				<div className="flex gap-2">
 					<div className="flex justify-center items-center w-5 h-5 rounded-full bg-black text-white">
@@ -41,17 +41,17 @@ const Reviews = () => {
 
 				<div className="col-span-3">
 					{/* Main Heading */}
-					<h2 className="text-[96px] mb-3 w-4/5 font-inter-700 leading-[110%] text-black">
+					<h2 className="text-[96px] max-sm:text-[60px] mb-3 w-4/5 font-inter-600 leading-[110%] text-black">
 						Отзывы
 					</h2>
 
 					{/* Description */}
-					<p className="text-3xl font-inter-600 leading-[140%] text-black mt-3 max-w-2xl">
+					<p className="text-3xl max-sm:text-2xl font-inter-600 leading-[140%] text-black mt-3 max-w-2xl">
 						©2025
 					</p>
 				</div>
 			</div>
-			<div className="mt-16 grid grid-cols-1 lg:grid-cols-4 gap-1">
+			<div className="mt-16 max-sm:mt-6 grid max-lg:grid-cols-2 max-md:grid-cols-1 grid-cols-4 gap-1">
 				{/* Stats Card */}
 				<div className="bg-white rounded-xl p-6 flex flex-col justify-between">
 					<div className="flex gap-6">

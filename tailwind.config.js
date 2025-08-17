@@ -31,6 +31,9 @@ export default {
          "gray-900": "#98A2B3",
       },
       extend: {
+         screens: {
+            xs: '400px', // 💡 bu yerda xs ni qo‘shyapsiz
+         },
          fontFamily: {
             "inter-400": ["inter-400"],
             "inter-500": ["inter-500"],

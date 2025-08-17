@@ -24,7 +24,7 @@ const ContactInfo = () => {
 
 				<div className='flex flex-col gap-12 md:flex-row md:items-start md:justify-between md:gap-8'>
 					{/* Left/Top Part: Contacts & Socials */}
-					<div className='flex flex-col gap-4 text-[28px] font-medium leading-none tracking-[-0.02em] md:text-[32px] ml-auto'>
+					<div className='flex hidden flex-col gap-4 text-[28px] font-medium leading-none tracking-[-0.02em] md:text-[32px] ml-auto'>
 						<a
 							href='tel:88127508500'
 							className='transition-opacity hover:opacity-70'
@@ -40,7 +40,7 @@ const ContactInfo = () => {
 						</a>
 
 						{/* Social Links (Mobile Only) */}
-						<div className='mt-8 flex flex-col gap-6 '>
+						<div className='mt-8  flex flex-col gap-6 '>
 							<a
 								href='https://x.com/bynneh'
 								target='_blank'

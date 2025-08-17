@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Catalog from "../pages/Catalog";
 import Blog from "../pages/Blog";
 import Contact from "../pages/Contact";
+import About from "../pages/About";
 import BurgerMenu from "./BurgerMenu";
 import TransitionOverlay from "./TransitionOverlay";
 
@@ -13,7 +14,7 @@ function Header() {
 
 	return (
 		<>
-			<header className="container1">
+			<header className="px-8 fixed w-full z-50 bg-white">
 				<nav className="flex justify-between items-center">
 					<NavLink
 						className="font-inter-600 text-xl relative z-50"
@@ -24,29 +25,36 @@ function Header() {
 					</NavLink>
 
 					<NavLink
-						className="font-inter-600"
+						className="font-inter-600 max-lg:hidden"
 						to="/catalog"
 						onClick={closeMenu}
 					>
 						Каталог
 					</NavLink>
 					<NavLink
-						className="font-inter-600"
+						className="font-inter-600 max-lg:hidden"
 						to="/blog"
 						onClick={closeMenu}
 					>
 						Блог
 					</NavLink>
 					<NavLink
-						className="font-inter-600"
+						className="font-inter-600 max-lg:hidden"
 						to="/contact"
 						onClick={closeMenu}
 					>
 						Контакты
 					</NavLink>
-					<div>
-						<p>info@arcrobot.ru </p>
-						<p>8(812)750 85 00</p>
+					{/* <NavLink
+						className="font-inter-600 max-lg:hidden"
+						to="/about"
+						onClick={closeMenu}
+					>
+						About
+					</NavLink> */}
+					<div className="max-lg:hidden">
+						<p className="leading-4">info@arcrobot.ru </p>
+						<p className="leading-5">8(812)750 85 00</p>
 					</div>
 
 					<BurgerMenu
@@ -61,6 +69,7 @@ function Header() {
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/catalog" element={<Catalog />} />
+				<Route path="/about" element={<About />} />
 				<Route path="/blog" element={<Blog />} />
 				<Route path="/contact" element={<Contact />} />
 			</Routes>
