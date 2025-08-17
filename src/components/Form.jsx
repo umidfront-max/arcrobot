@@ -207,11 +207,11 @@ const App = () => {
 										xmlns="http://www.w3.org/2000/svg"
 										viewBox="0 0 256 256"
 										focusable="false"
+										className="w-6 h-6 max-sm:w-5 max-sm:h-5"
 										color="var(--token-90ab9b9d-c64e-4230-9e06-707b75634f37, rgb(255, 255, 255))"
 										style={{
 											userSelect: "none",
-											width: "25px",
-											height: "25px",
+
 											display: "inline-block",
 											fill: "var(--token-90ab9b9d-c64e-4230-9e06-707b75634f37, rgb(255, 255, 255))",
 											color: "var(--token-90ab9b9d-c64e-4230-9e06-707b75634f37, rgb(255, 255, 255))",
@@ -225,7 +225,7 @@ const App = () => {
 											<path d="M114.34,154.34l96-96a8,8,0,0,1,11.32,11.32l-96,96a8,8,0,0,1-11.32-11.32ZM128,88a63.9,63.9,0,0,1,20.44,3.33,8,8,0,1,0,5.11-15.16A80,80,0,0,0,48.49,160.88,8,8,0,0,0,56.43,168c.29,0,.59,0,.89-.05a8,8,0,0,0,7.07-8.83A64.92,64.92,0,0,1,64,152,64.07,64.07,0,0,1,128,88Zm99.74,13a8,8,0,0,0-14.24,7.3,96.27,96.27,0,0,1,5,75.71l-181.1-.07A96.24,96.24,0,0,1,128,56h.88a95,95,0,0,1,42.82,10.5A8,8,0,1,0,179,52.27a112,112,0,0,0-156.66,137A16.07,16.07,0,0,0,37.46,200H218.53a16,16,0,0,0,15.11-10.71,112.35,112.35,0,0,0-5.9-88.3Z"></path>
 										</g>
 									</svg>
-									<span className="ml-4 text-lg font-inter-400">
+									<span className="ml-4 text-lg max-sm:text-base max-sm:ml-2 font-inter-400">
 										Быстрый ответ
 									</span>
 									<p className="mt-4 text-white/70 max-sm:text-[13px] font-inter-500">
@@ -240,10 +240,10 @@ const App = () => {
 										viewBox="0 0 256 256"
 										focusable="false"
 										color="var(--token-90ab9b9d-c64e-4230-9e06-707b75634f37, rgb(255, 255, 255))"
+										className="w-6 h-6 max-sm:w-5 max-sm:h-5"
 										style={{
 											userSelect: "none",
-											width: "25px",
-											height: "25px",
+
 											display: "inline-block",
 											fill: "var(--token-90ab9b9d-c64e-4230-9e06-707b75634f37, rgb(255, 255, 255))",
 											color: "var(--token-90ab9b9d-c64e-4230-9e06-707b75634f37, rgb(255, 255, 255))",
@@ -257,7 +257,7 @@ const App = () => {
 											<path d="M248,56a8,8,0,0,1-8,8H192v40a8,8,0,0,1-8,8H136v40a8,8,0,0,1-8,8H80v40a8,8,0,0,1-8,8H16a8,8,0,0,1,0-16H64V152a8,8,0,0,1,8-8h48V104a8,8,0,0,1,8-8h48V56a8,8,0,0,1,8-8h56A8,8,0,0,1,248,56Z"></path>
 										</g>
 									</svg>
-									<span className="ml-4 text-lg font-inter-400">
+									<span className="ml-4 text-lg max-sm:text-base max-sm:ml-2 font-inter-400">
 										Понятные следующие шаги
 									</span>
 									<p className="mt-4 max-sm:text-[13px] text-white/70 font-inter-500">

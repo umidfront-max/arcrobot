@@ -88,7 +88,7 @@ function CatalogId() {
 
 	return (
 		<div className="container1 py-4 pt-12 max-md:pt-20">
-			<p className="font-inter-600 text-[150px] max-xl:text-[120px] max-lg:text-[80px] max-md:text-[54px] tracking-tighter">
+			<p className="font-inter-600 text-[150px] max-xl:text-[120px] max-sm:leading-[60px] max-lg:text-[80px] max-md:text-[54px] tracking-tighter">
 				{catalog.name}
 			</p>
 			<div className="my-6 max-w-[640px]">
@@ -236,15 +236,15 @@ function CatalogId() {
 					<h3 className="font-semibold text-[17px] text-black/70 mb-1">
 						Технические характеристики:
 					</h3>
-					<div className="rounded-xl border border-b-0 border-gray/20 overflow-hidden">
+					<div className="rounded-xl border border-b-0 border-t-0 border-gray/40 overflow-hidden">
 						<table className="w-full max-sm:table-fixed">
 							<tbody>
 								{specs.map((item, i) => (
 									<tr key={i} className="even:bg-gray-100">
-										<td className="border text-black/70 p-2 font-inter-600 w-1/2">
+										<td className="border border-gray/40 border-l-0 text-black/70 p-2 font-inter-600 w-1/2">
 											{item.label}
 										</td>
-										<td className="border font-inter-600 p-2 max-sm:min-w-[6rem]">
+										<td className="border border-gray/40 border-r-0 font-inter-600 p-2 max-sm:min-w-[6rem]">
 											{item.value}
 										</td>
 									</tr>
