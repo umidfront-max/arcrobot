@@ -34,6 +34,7 @@ function App() {
 					initial="rest"
 					animate="rest"
 					whileHover="hover"
+					whileTap="active"
 					className="relative bg-black text-white py-2 px-3 pr-1 rounded-xl flex items-center gap-2 overflow-hidden transition-colors duration-300"
 					variants={{
 						rest: { backgroundColor: "#000000", color: "#ffffff" },
@@ -42,6 +43,11 @@ function App() {
 							color: "#000000",
 							transition: { duration: 0 },
 						}, // sariq: #facc15
+						active: {
+							// <-- qo‘shildi
+							backgroundColor: "#d2ff37",
+							color: "#000000",
+						},
 					}}
 				>
 					{/* Hoverda paydo bo‘ladigan matn */}

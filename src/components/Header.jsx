@@ -7,7 +7,7 @@ import Contact from "../pages/Contact";
 import About from "../pages/About";
 import BurgerMenu from "./BurgerMenu";
 import TransitionOverlay from "./TransitionOverlay";
-
+import ScrollToTop from "./ScrollToTop";
 function Header() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const closeMenu = () => setIsMenuOpen(false);
@@ -45,13 +45,6 @@ function Header() {
 					>
 						Контакты
 					</NavLink>
-					{/* <NavLink
-						className="font-inter-600 max-lg:hidden"
-						to="/about"
-						onClick={closeMenu}
-					>
-						About
-					</NavLink> */}
 					<div className="max-lg:hidden">
 						<p className="leading-4">info@arcrobot.ru </p>
 						<p className="leading-5">8(812)750 85 00</p>
@@ -65,7 +58,8 @@ function Header() {
 				</nav>
 
 				<TransitionOverlay />
-			</header>
+         </header>
+         <ScrollToTop />
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/catalog" element={<Catalog />} />

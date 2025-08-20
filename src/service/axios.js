@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 export const axiosInstance = axios.create({
-   baseURL: "https://arcrobot.ru/api",
+   baseURL: "https://api.arcrobot.ru/api",
    timeout: 20000,
    headers: {
       Accept: 'application/json',

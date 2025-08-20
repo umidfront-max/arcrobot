@@ -34,7 +34,7 @@ const Reviews = () => {
 				{/* Why Us */}
 				<div className="flex gap-2">
 					<div className="flex justify-center items-center w-5 h-5 rounded-full bg-black text-white">
-						<span className="mb-[1px]">+</span>
+						<span className="mb-[2px]">+</span>
 					</div>
 					<p className="text-base font-medium">Опыт работы с нами</p>
 				</div>
