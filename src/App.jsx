@@ -28,7 +28,7 @@ function App() {
 				<Route path="/catalog/:slug" element={<CatalogId />} />
 				<Route path="/block/:id" element={<BlogId />} />
 			</Routes>
-			<div className="fixed bottom-10 right-10 z-50">
+			<div className="fixed bottom-10 right-10 z-10">
 				<motion.button
 					onClick={() => setIsModalOpen(true)}
 					initial="rest"

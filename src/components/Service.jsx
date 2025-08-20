@@ -1,5 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 const data = [
 	{
@@ -56,6 +58,7 @@ const data = [
 ];
 
 export default function Service() {
+   const navigate = useNavigate();
 	const [openIndex, setOpenIndex] = useState(0);
 
 	const toggleIndex = (index) => {
@@ -184,7 +187,7 @@ export default function Service() {
 			<div className="grid grid-cols-4">
 				<div></div>
 				<div className="col-span-3 max-sm:col-span-4 max-sm:text-center">
-					<button className="h-[52px] mt-6 bg-white text-black rounded-3xl px-6 font-inter-600">
+					<button onClick={()=> navigate('/contact')}  className="h-[52px] mt-6 bg-white text-black rounded-3xl px-6 font-inter-600">
 						Записаться на демонстрацию
 					</button>
 				</div>

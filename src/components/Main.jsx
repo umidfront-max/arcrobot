@@ -47,7 +47,7 @@ const App = () => {
 				<div className="absolute inset-0 bg-black/30 rounded-3xl z-10"></div>
 
 				{/* Kontent */}
-				<div className="relative z-20 h-full text-center px-4 max-md:px-2">
+				<div className="relative z-10 h-full text-center px-4 max-md:px-2">
 					<div className="flex justify-between flex-wrap">
 						<div className="pt-[8%] max-xl:pt-[6%] max-md:pt-[10%] max-sm:px-2 pl-12 max-md:pl-3">
 							<h1 className="text-[216px] max-sm:text-[90px] max-xs:text-[70px] max-xl:text-[200px] max-sm:px-0 max-sm:text-start max-lg:text-[140px] max-md:pl-3 tracking-tighter font-inter-600 leading-none font-inter">
@@ -87,7 +87,7 @@ const App = () => {
 													transition: { duration: 0.1 },
 												},
 											}}
-											className="absolute px-2 text-left whitespace-nowrap text-sm w-full left-0 top-1 -translate-y-1"
+											className="absolute px-3 text-left whitespace-nowrap text-sm w-full left-0 top-1 -translate-y-1"
 										>
 											Обсудить проект
 										</motion.p>
@@ -100,7 +100,7 @@ const App = () => {
 													transition: { duration: 0.1 },
 												},
 											}}
-											className="w-full px-2 text-left absolute whitespace-nowrap text-sm left-0 top-1 -translate-y-1"
+											className="w-full px-3 text-left absolute whitespace-nowrap text-sm left-0 top-1 -translate-y-1"
 										>
 											Обсудить проект
 										</motion.p>
