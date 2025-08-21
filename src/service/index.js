@@ -17,6 +17,15 @@ export async function getBlog_API() {
    } catch (error) {
       return [error, null]
    }
+
+} export async function getSites_API() {
+   try {
+      const response = await axiosInstance.get(`/sites`)
+
+      return [null, response.data]
+   } catch (error) {
+      return [error, null]
+   }
 }
 export async function getCatalog_API() {
    try {

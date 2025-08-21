@@ -2,7 +2,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-
 const data = [
 	{
 		id: "001",
@@ -58,7 +57,7 @@ const data = [
 ];
 
 export default function Service() {
-   const navigate = useNavigate();
+	const navigate = useNavigate();
 	const [openIndex, setOpenIndex] = useState(0);
 
 	const toggleIndex = (index) => {
@@ -79,21 +78,29 @@ export default function Service() {
 					transition={{ duration: 0.6, ease: "easeOut" }}
 				>
 					<span>Сервис </span>
-					<span className="text-white/40 text-3xl relative -top-12 max-sm:-top-8 left-4">
+					<span className="text-white/40 text-3xl max-sm:text-2xl relative -top-12 max-sm:-top-8 left-4">
 						({data.length})
 					</span>
 				</motion.div>
 			</div>
-			<div className="space-y-4">
+			<div className="">
 				{data.map((item, index) => {
 					const isOpen = openIndex === index;
 					return (
 						<div key={item.id}>
 							<div
-								className="grid grid-cols-4 cursor-pointer max-sm:flex border-t border-white/20 py-6"
+								className={`grid grid-cols-4 cursor-pointer max-sm:flex 
+              ${index === 0 ? "border-t-0" : "border-t"} 
+               border-white/20 max-sm:items-center py-6`}
 								onClick={() => toggleIndex(index)}
 							>
-								<div className={`mr-4 max-sm:w-12 ${!isOpen ? 'text-white text-white/50' : ''}`}>({item.id})</div>
+								<div
+									className={`mr-4 max-sm:w-10 max-sm:mr-2 max-sm:text-sm ${
+										!isOpen ? "text-white text-white/50" : ""
+									}`}
+								>
+									({item.id})
+								</div>
 								<div className="col-span-3 max-sm:flex-1 flex justify-between items-start relative">
 									<AnimatePresence mode="wait">
 										{!isOpen && (
@@ -103,7 +110,7 @@ export default function Service() {
 												animate={{ opacity: 1, y: 0 }}
 												exit={{ opacity: 0, y: -10 }}
 												transition={{ duration: 0.4 }}
-												className="text-xl font-inter-600 flex-1 absolute left-0 top-0"
+												className="text-xl font-inter-600 max-sm:pr-8 max-sm:text-lg max-xs:text-base flex-1 absolute left-0 top-0"
 											>
 												{item.title}
 											</motion.div>
@@ -115,7 +122,9 @@ export default function Service() {
 										animate={{ rotate: isOpen ? 180 : 0 }}
 										transition={{ duration: 0.6, ease: "easeInOut" }}
 									>
-										<span className="mb-1">{isOpen ? "−" : "+"}</span>
+										<span className="mb-[5px] max-xx:mr-[1px]">
+											{isOpen ? "−" : "+"}
+										</span>
 									</motion.button>
 								</div>
 							</div>
@@ -153,7 +162,7 @@ export default function Service() {
 														<p className="text-3xl font-inter-500 max-sm:text-2xl">
 															{item.title}
 														</p>
-														<p className="mb-4 max-xl:max-w-full max-w-xl text-white/70 font-inter-400 mt-2">
+														<p className="mb-4 max-xl:max-w-full max-sm:text-sm max-w-xl text-white/70 font-inter-400 mt-2">
 															{item.content}
 														</p>
 													</div>
@@ -168,7 +177,7 @@ export default function Service() {
 														{item.advantages.map((adv, i) => (
 															<button
 																key={i}
-																className="bg-white text-black font-inter-600 px-3 py-1 rounded-full text-sm"
+																className="bg-white text-black font-inter-600 px-3 py-1 rounded-full text-sm max-sm:text-xs"
 															>
 																{adv}
 															</button>
@@ -187,7 +196,10 @@ export default function Service() {
 			<div className="grid grid-cols-4">
 				<div></div>
 				<div className="col-span-3 max-sm:col-span-4 max-sm:text-center">
-					<button onClick={()=> navigate('/contact')}  className="h-[52px] mt-6 bg-white text-black rounded-3xl px-6 font-inter-600">
+					<button
+						onClick={() => navigate("/contact")}
+						className="h-[52px] mt-6 bg-white text-black rounded-3xl max-sm:h-12 max-sm:w-full px-6 font-inter-600"
+					>
 						Записаться на демонстрацию
 					</button>
 				</div>

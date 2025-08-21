@@ -235,36 +235,38 @@ const App = () => {
 									</p>
 								</div>
 								<div>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										viewBox="0 0 256 256"
-										focusable="false"
-										color="var(--token-90ab9b9d-c64e-4230-9e06-707b75634f37, rgb(255, 255, 255))"
-										className="w-6 h-6 max-sm:w-5 max-sm:h-5"
-										style={{
-											userSelect: "none",
-
-											display: "inline-block",
-											fill: "var(--token-90ab9b9d-c64e-4230-9e06-707b75634f37, rgb(255, 255, 255))",
-											color: "var(--token-90ab9b9d-c64e-4230-9e06-707b75634f37, rgb(255, 255, 255))",
-											flexShrink: 0,
-										}}
-									>
-										<g
+									<div className="flex">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 256 256"
+											focusable="false"
 											color="var(--token-90ab9b9d-c64e-4230-9e06-707b75634f37, rgb(255, 255, 255))"
-											weight="regular"
+											className="w-6 h-6 max-sm:w-5 max-sm:h-5"
+											style={{
+												userSelect: "none",
+
+												display: "inline-block",
+												fill: "var(--token-90ab9b9d-c64e-4230-9e06-707b75634f37, rgb(255, 255, 255))",
+												color: "var(--token-90ab9b9d-c64e-4230-9e06-707b75634f37, rgb(255, 255, 255))",
+												flexShrink: 0,
+											}}
 										>
-											<path d="M248,56a8,8,0,0,1-8,8H192v40a8,8,0,0,1-8,8H136v40a8,8,0,0,1-8,8H80v40a8,8,0,0,1-8,8H16a8,8,0,0,1,0-16H64V152a8,8,0,0,1,8-8h48V104a8,8,0,0,1,8-8h48V56a8,8,0,0,1,8-8h56A8,8,0,0,1,248,56Z"></path>
-										</g>
-									</svg>
-									<span className="ml-4 text-lg max-sm:text-base max-sm:ml-2 font-inter-400">
-										Понятные следующие шаги
-									</span>
-									<p className="mt-4 max-sm:text-[13px] text-white/70 font-inter-500">
-										После обсуждения вы получите технико-коммерческое
-										предложение с 3D-сценарием, сроками и стоимостью
-										проекта.
-									</p>
+											<g
+												color="var(--token-90ab9b9d-c64e-4230-9e06-707b75634f37, rgb(255, 255, 255))"
+												weight="regular"
+											>
+												<path d="M248,56a8,8,0,0,1-8,8H192v40a8,8,0,0,1-8,8H136v40a8,8,0,0,1-8,8H80v40a8,8,0,0,1-8,8H16a8,8,0,0,1,0-16H64V152a8,8,0,0,1,8-8h48V104a8,8,0,0,1,8-8h48V56a8,8,0,0,1,8-8h56A8,8,0,0,1,248,56Z"></path>
+											</g>
+										</svg>
+										<span className="ml-4 text-lg max-sm:text-base max-sm:leading-4 max-sm:ml-2 font-inter-400">
+											Понятные следующие шаги
+										</span>
+									</div>
+										<p className="mt-4 max-sm:text-[12px] text-white/70 font-inter-500">
+											После обсуждения вы получите
+											технико-коммерческое предложение с
+											3D-сценарием, сроками и стоимостью проекта.
+										</p>
 								</div>
 							</div>
 							<div className="bg-white max-xl:mt-0 text-black p-4 max-md:w-max px-6 rounded-xl shadow-lg mb-4 w-max mt-4">

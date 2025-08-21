@@ -60,7 +60,7 @@ function WhyUs() {
 	return (
 		<section className="container1 overflow-hidden">
 			{/* Header */}
-			<div className="grid grid-cols-4">
+			<div className="grid grid-cols-4 max-sm:grid-cols-1">
 				<div className="flex gap-2">
 					<div className="flex justify-center items-center w-5 h-5 rounded-full bg-black text-white">
 						<span className="mb-[1px] font-inter-600">+</span>
@@ -76,12 +76,12 @@ function WhyUs() {
 					viewport={{ once: true, amount: 0.3 }} // faqat bir marta, 30% ko'rinsa
 				>
 					<p className="text-xl font-semibold max-md:hidden">arcrobot</p>
-					<h2 className="max-lg:text-[40px] my-3 w-4/5 text-[60px] max-xl:w-full font-inter-600 leading-[110%] text-black/60">
+					<h2 className="max-lg:text-[40px] my-3 w-4/5 text-[60px] max-sm:text-[32px] max-xl:w-full font-inter-600 leading-[110%] text-black/60">
 						<span className="text-black">Как</span>{" "}
 						<span className="text-black">arcrobot</span> помогает
 						автоматизировать производство.
 					</h2>
-					<p className="text-[18px] font-medium leading-[140%] text-gray/50 mt-4 max-w-2xl">
+					<p className="text-[18px] font-medium leading-[140%] text-gray/50 mt-4 max-sm:text-sm max-w-2xl">
 						Четыре причины, почему компании выбирают роботизацию:
 						стабильное качество, высокая скорость, быстрый запуск и
 						экономическая выгода.
@@ -119,6 +119,7 @@ function WhyUs() {
 											textColor="text-black"
 											hoverBg="hover:bg-black/10"
 											width="w-40 max-xl:w-32"
+											id={i+1}
 										/>
 									</div>
 								</div>
@@ -139,12 +140,14 @@ function WhyUs() {
 									<p className="my-5 text-black/60">{item.text}</p>
 									<div className="flex gap-4">
 										<WhyHoverButton />
+
 										<WhyHoverButton
 											text="подробнее"
 											bgColor="bg-white"
 											textColor="text-black"
 											hoverBg="hover:bg-black/10"
 											width="w-40 max-xl:w-32"
+											id={i+1}
 										/>
 									</div>
 								</div>

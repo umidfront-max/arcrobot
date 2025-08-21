@@ -5,7 +5,7 @@ export default function FirstHand() {
 		<div className="container1">
 			<div className="grid grid-cols-2 max-lg:grid-cols-1 gap-1 ">
 				<div>
-					<h2 className="text-[54px] max-sm:text-[36px] max-sm:leading-[40px] max-sm:mb-4 font-inter-600 leading-[60px] text-[#0a0a0a99]">
+					<h2 className="text-[54px] max-sm:text-[32px] max-sm:leading-[36px] max-sm:mb-4 font-inter-600 leading-[60px] text-[#0a0a0a99]">
 						<span className="text-[#090909]">Всё, что важно знать</span> о
 						роботах на производстве — из первых рук.
 					</h2>
@@ -29,14 +29,14 @@ export default function FirstHand() {
 							<span className="font-inter-600 pb-[3px] pr-[1px]">+</span>
 						</div>
 					</div>
-					<div className="p-5 pt-2 max-lg:pt-8">
+					<div className="p-5 pt-2 max-lg:pt-8 max-sm:px-2">
 						<p className="text-xs text-[#090909] relative bottom-3  transition-all duration-500 group-hover:bottom-0">
 							2 февраля 2025 г.
 						</p>
-						<h3 className="text-xl mt-2 mb-4 leading-6">
+						<h3 className="text-xl font-inter-600 mt-2 mb-4 leading-6">
 							Стабильное качество: почему сварочный робот лучше человека
 						</h3>
-						<p className="text-[#0a0a0a99]">
+						<p className="text-[#0a0a0a99] max-sm:text-sm">
 							Робот варит с точностью, которую не повторит человек.
 							Узнай, почему автоматическая сварка даёт стабильный
 							результат без брака.
@@ -54,14 +54,14 @@ export default function FirstHand() {
 							<span className="font-inter-600 pb-[3px] pr-[1px]">+</span>
 						</div>
 					</div>
-					<div className="p-5">
+					<div className="p-5  max-lg:pt-8 max-sm:px-2">
 						<p className="text-xs text-[#090909] relative bottom-3  transition-all duration-500 group-hover:bottom-0">
 							2 февраля 2025 г.
 						</p>
-						<h3 className="text-xl leading-6 mt-2 mb-4">
+						<h3 className="text-xl font-inter-600 leading-6 mt-2 mb-4">
 							Быстрая сварка — как робот ускоряет производство
 						</h3>
-						<p className="text-[#0a0a0a99]">
+						<p className="text-[#0a0a0a99] max-sm:text-sm">
 							Робот сваривает быстрее человека: без пауз, усталости и
 							брака. Узнай, как это ускоряет производство и даёт
 							конкурентное преимущество.

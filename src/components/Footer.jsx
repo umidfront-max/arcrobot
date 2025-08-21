@@ -1,7 +1,29 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import AnimatedNavLinkFoter from "./AnimatedNavLinkFoter";
+import { getSites_API } from "../service";
+import { useEffect, useState } from "react";
+
 const Footer = () => {
+	const [sites, setSites] = useState([]);
+
+	useEffect(() => {
+		const fetchSites = async () => {
+			try {
+				const [error, response] = await getSites_API();
+				if (error) {
+					console.error("Xatolik:", error);
+					return;
+				}
+				setSites(response.data || []);
+			} catch (err) {
+				console.error("Sites yuklanmadi:", err);
+			}
+		};
+
+		fetchSites();
+	}, []);
+
 	return (
 		<footer className="font-sans text-black">
 			<div className="container1 pt-3 pb-16 max-sm:pb-10">
@@ -68,24 +90,18 @@ const Footer = () => {
 										Мы в мессенджерах
 									</p>
 									<nav className="flex flex-col gap-2">
-										<a
-											href="#"
-											target="_blank"
-											rel="noopener noreferrer"
-											className="flex items-center text-xl font-medium group hover:opacity-70 transition-opacity"
-										>
-											Telegram
-											<ArrowRight className="w-5 h-5 ml-2" />
-										</a>
-										<a
-											href="#"
-											target="_blank"
-											rel="noopener noreferrer"
-											className="flex items-center text-xl font-medium group hover:opacity-70 transition-opacity"
-										>
-											WhatsApp
-											<ArrowRight className="w-5 h-5 ml-2" />
-										</a>
+										{sites.map((site) => (
+											<a
+												key={site.id}
+												href={site.link}
+												target="_blank"
+												rel="noopener noreferrer"
+												className="flex items-center text-xl font-medium group hover:opacity-70 transition-opacity"
+											>
+												{site.name}
+												<ArrowRight className="w-5 h-5 ml-2" />
+											</a>
+										))}
 									</nav>
 								</div>
 							</div>

@@ -29,7 +29,7 @@ const App = () => {
 			<motion.div
 				// Height shartga qarab dynamic yoki static bo‘ladi
 				style={{ height: useAnimation ? animatedHeight : staticHeight }}
-				className="relative w-full overflow-hidden rounded-3xl max-md:!h-[780px] text-white font-inter-500"
+				className="relative w-full overflow-hidden rounded-3xl max-md:!h-[780px] max-xx:!h-[700px] text-white font-inter-500"
 			>
 				{/* Video fon */}
 				<video
@@ -110,9 +110,9 @@ const App = () => {
 							</div>
 						</div>
 					</div>
-					<p className="text-left pl-10 max-md:pl-4 max-w-3xl -mt-20 max-xl:mt-10 text-lg md:text-xl mb-8">
+					<p className="text-left pl-10 max-md:pl-4 max-w-3xl -mt-20 max-xl:mt-10 text-lg md:text-xl mb-8 max-sm:leading-6">
 						<strong>Без воды. Без рисков.</strong> Роботы, которые делают
-						<br />
+						<br className="max-sm:hidden" />
 						свою работу — быстро, точно, надёжно.
 					</p>
 					<div className="grid grid-cols-4 -mt-2 px-10 max-md:hidden">

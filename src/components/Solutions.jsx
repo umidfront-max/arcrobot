@@ -19,8 +19,8 @@ const Solutions = () => {
             setCatalog(response.data);
          };
 	return (
-		<div className="mt-4">
-			<h2 className="text-[140px] max-md:text-[100px] max-sm:text-[70px] font-inter-600 text-center">Решения</h2>
+		<div className="mt-4 max-sm:mt-12">
+			<h2 className="text-[140px] max-md:text-[100px] max-sm:text-[62px] font-inter-600 text-center">Решения</h2>
 			<p className="text-center -mt-4 max-sm:mt-0 text-gray/60">
 				Готовые роботизированные <br /> ячейки под разные задачи{" "}
 			</p>

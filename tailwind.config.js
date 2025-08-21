@@ -33,6 +33,7 @@ export default {
       extend: {
          screens: {
             xs: '400px', // 💡 bu yerda xs ni qo‘shyapsiz
+            xx: '460px', // 💡 bu yerda xs ni qo‘shyapsiz
          },
          fontFamily: {
             "inter-400": ["inter-400"],

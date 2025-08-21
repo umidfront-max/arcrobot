@@ -5,6 +5,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import CatalogId from "./pages/CatalogId";
 import BlogId from "./pages/BlogId";
+import BlogStaticId from "./pages/BlogStaticId";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import { Zap } from "lucide-react";
 import { motion } from "framer-motion";
 import ContactModal from "./components/ContactModal";
@@ -27,8 +29,10 @@ function App() {
 			<Routes>
 				<Route path="/catalog/:slug" element={<CatalogId />} />
 				<Route path="/block/:id" element={<BlogId />} />
+				<Route path="/block-static/:id" element={<BlogStaticId />} />
+				<Route path="/privacy-policy" element={<PrivacyPolicy />} />
 			</Routes>
-			<div className="fixed bottom-10 right-10 z-10">
+			<div className="fixed bottom-10 right-10 max-sm:right-6 z-10">
 				<motion.button
 					onClick={() => setIsModalOpen(true)}
 					initial="rest"

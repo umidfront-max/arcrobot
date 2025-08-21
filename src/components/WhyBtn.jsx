@@ -9,16 +9,16 @@ const WhyHoverButton = ({
 	textColor = "text-white",
 	hoverBg = "hover:bg-black",
 	width = "w-60 max-xl:w-44",
-	navigateTo = "/some-page", // fallback page
+	id,
+	navigateTo = "/block-static/", // fallback page
 }) => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const navigate = useNavigate();
-
 	const handleClick = () => {
 		if (text === "Оставить заявку") {
 			setIsModalOpen(true);
 		} else {
-			navigate(navigateTo); // boshqa sahifaga o'tadi
+			navigate(navigateTo + id); // boshqa sahifaga o'tadi
 		}
 	};
 

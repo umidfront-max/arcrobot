@@ -131,7 +131,7 @@ export default function FAQ() {
             <motion.div
               key={index}
               layout
-              className="bg-white rounded-xl px-2 py-2 transition-all"
+              className="bg-white rounded-xl px-2 py-2 max-sm:p-1 transition-all"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -139,9 +139,9 @@ export default function FAQ() {
             >
               <button
                 onClick={() => toggle(index)}
-                className="w-full flex justify-between items-center p-4 font-medium text-left"
+                className="w-full flex justify-between items-center p-4 max-sm:p-3 font-medium text-left"
               >
-                <span>{item.question}</span>
+                <span className="flex-1 pr-2 max-sm:text-[15px]">{item.question}</span>
                 <motion.div
                   animate={{ rotate: openIndex === index ? 360 : 0 }}
                   transition={{ duration: 0.3 }}
@@ -160,14 +160,14 @@ export default function FAQ() {
                     animate={{ height: "auto" }}
                     exit={{ height: 0 }}
                     transition={{ duration: 0.4, ease: "easeInOut" }}
-                    className="overflow-hidden px-6"
+                    className="overflow-hidden px-6 max-sm:px-3"
                   >
                     <motion.div
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
                       transition={{ duration: 0.3 }}
-                      className="pb-6 text-black/60 text-base leading-relaxed"
+                      className="pb-6 max-sm:pb-4 text-black/60 text-base leading-relaxed max-sm:leading-5 max-sm:text-sm"
                     >
                       {item.answer}
                     </motion.div>
