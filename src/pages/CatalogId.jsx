@@ -58,7 +58,7 @@ function CatalogId() {
 		}
 		try {
 			const { data } = await axios.get(
-				`https://arcrobot.ru/api/image-position/${encodeURIComponent(
+				`https://api.arcrobot.ru/api/image-position/${encodeURIComponent(
 					imgUrl
 				)}`
 			);
