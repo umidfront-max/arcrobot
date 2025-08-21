@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import AnimatedNavLink from "./AnimatedNavLink"; // ✅ Custom component
+import AnimatedNavLink from "./AnimatedNavLink";
+import { getSites_API } from "../service"; // ✅ API import
+import { Link } from "react-router-dom";
 
 const navItems = [
 	{ to: "/", label: "Главная" },
@@ -23,6 +25,33 @@ const navItemVariants = {
 };
 
 const BurgerMenuWithModal = ({ isOpen, setIsOpen, closeMenu }) => {
+	const [sites, setSites] = useState([]);
+
+	useEffect(() => {
+		const fetchSites = async () => {
+			try {
+				const [error, response] = await getSites_API();
+				if (error) {
+					console.error("Xatolik:", error);
+					return;
+				}
+				setSites(response.data || []);
+			} catch (err) {
+				console.error("Sites yuklanmadi:", err);
+			}
+		};
+
+		fetchSites();
+	}, []);
+
+	// Iconlarni keyiga qarab bog‘lab beramiz (name => icon)
+	const icons = {
+		telegram:
+			"https://framerusercontent.com/images/6XWmE2hB6SujmGKLzRcUn4KcW4.png",
+		whatsapp:
+			"https://framerusercontent.com/images/UL6OADrwUbVpS53GJJmA3yohw8.svg",
+	};
+
 	return (
 		<>
 			{/* Burger icon */}
@@ -33,12 +62,16 @@ const BurgerMenuWithModal = ({ isOpen, setIsOpen, closeMenu }) => {
 				>
 					<span
 						className={`w-[58px] h-[2px] bg-black rounded transition-all duration-300 origin-center absolute ${
-							isOpen ? "rotate-12" : "-translate-y-[3px] max-lg:-translate-y-1"
+							isOpen
+								? "rotate-12"
+								: "-translate-y-[3px] max-lg:-translate-y-1"
 						}`}
 					></span>
 					<span
 						className={`w-[58px] h-[2px] bg-black rounded transition-all duration-300 origin-center absolute ${
-							isOpen ? "-rotate-12" : "translate-y-[3px] max-lg:translate-y-1"
+							isOpen
+								? "-rotate-12"
+								: "translate-y-[3px] max-lg:translate-y-1"
 						}`}
 					></span>
 				</button>
@@ -64,19 +97,19 @@ const BurgerMenuWithModal = ({ isOpen, setIsOpen, closeMenu }) => {
 										initial="hidden"
 										animate="visible"
 										exit="hidden"
-										className="relative  list-none group cursor-pointer"
+										className="relative list-none group cursor-pointer"
 									>
 										<AnimatedNavLink
 											to={item.to}
 											label={item.label}
-											onClick={closeMenu} // ✅
+											onClick={closeMenu}
 										/>
 									</motion.li>
 								))}
 							</ul>
 
 							{/* Contact info */}
-							<div className="absolute bottom-20 max-lg:static max-lg:b-0  left-16 text-black">
+							<div className="absolute bottom-20 max-lg:static max-lg:b-0 left-16 text-black">
 								<div className="flex flex-col gap-1 max-lg:justify-center">
 									<a
 										href="tel:88127508500"
@@ -97,55 +130,42 @@ const BurgerMenuWithModal = ({ isOpen, setIsOpen, closeMenu }) => {
 											</a>
 										</span>
 									</div>
-									<div className="hidden max-lg:text-center mt-10  max-lg:block font-inter-600 text-black/70">
-										<p>Политика конфиденциальности</p>
+
+									{/* Messenger icons from API */}
+									<div className="hidden max-lg:text-center mt-10 max-lg:block font-inter-600 text-black/70">
+										<Link onClick={closeMenu} to="/privacy-policy">
+											Политика конфиденциальности
+										</Link>
 									</div>
 									<div className="max-lg:flex hidden -mb-10 mt-6 gap-4 items-center justify-center">
-										{/* Telegram */}
-										<a
-											href="https://t.me"
-											target="_blank"
-											rel="noopener"
-											aria-label="Link to Telegram"
-											className="w-9 h-9 p-2 rounded-full bg-[#ebebeb] flex items-center justify-center"
-										>
-											<img
-												src="https://framerusercontent.com/images/6XWmE2hB6SujmGKLzRcUn4KcW4.png"
-												srcSet="
-            https://framerusercontent.com/images/6XWmE2hB6SujmGKLzRcUn4KcW4.png?scale-down-to=512 512w,
-            https://framerusercontent.com/images/6XWmE2hB6SujmGKLzRcUn4KcW4.png 920w
-          "
-												sizes="32px"
-												alt="Telegram"
-												className="w-full h-full object-cover object-center rounded-full opacity-40"
-											/>
-										</a>
-
-										{/* WhatsApp */}
-										<a
-											href="https://wa.me"
-											target="_blank"
-											rel="noopener"
-											aria-label="Link to WhatsApp"
-											className="w-9 h-9 p-2 rounded-full bg-[#ebebeb] flex items-center justify-center"
-										>
-											<img
-												src="https://framerusercontent.com/images/UL6OADrwUbVpS53GJJmA3yohw8.svg"
-												srcSet="
-            https://framerusercontent.com/images/UL6OADrwUbVpS53GJJmA3yohw8.svg 737w
-          "
-												sizes="36px"
-												alt="WhatsApp"
-												className="w-full h-full object-cover object-center rounded-full opacity-40"
-											/>
-										</a>
+										{sites.map((site) => (
+											<a
+												key={site.id}
+												href={site.link}
+												target="_blank"
+												rel="noopener"
+												aria-label={`Link to ${site.name}`}
+												className="w-9 h-9 p-2 rounded-full bg-[#ebebeb] flex items-center justify-center"
+											>
+												<img
+													src={
+														icons[site.name.toLowerCase()] || ""
+													}
+													alt={site.name}
+													className="w-full h-full object-cover object-center rounded-full opacity-40"
+												/>
+											</a>
+										))}
 									</div>
 								</div>
 							</div>
 
 							{/* Privacy policy */}
-							<div className="absolute max-lg:hidden bottom-20 font-inter-600 text-black/70  -translate-x-1">
-								<p>Политика конфиденциальности</p>
+							<div className="absolute max-lg:hidden bottom-20 font-inter-600 text-black/70 -translate-x-1">
+								<Link onClick={closeMenu} to="/privacy-policy">
+									{" "}
+									Политика конфиденциальности
+								</Link>
 							</div>
 						</div>
 					</motion.div>
