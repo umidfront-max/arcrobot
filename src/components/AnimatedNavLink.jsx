@@ -8,7 +8,9 @@ const AnimatedNavLink = ({ to, label, onClick }) => {
 	const [hovered, setHovered] = useState(false);
 
 	return (
-		<div
+		<MotionNavLink
+			to={to}
+			onClick={onClick}
 			className="relative inline-block px-4 py-1 overflow-hidden"
 			onMouseEnter={() => setHovered(true)}
 			onMouseLeave={() => setHovered(false)}
@@ -20,9 +22,7 @@ const AnimatedNavLink = ({ to, label, onClick }) => {
 			>
 				{label}
 			</motion.div>
-			<MotionNavLink
-				to={to}
-				onClick={onClick} // 👈 Modalni yopish uchun
+			<motion.div
 				className="absolute left-0 top-0 z-0 w-full h-full text-black/80 font-semibold"
 				style={{
 					clipPath: hovered
@@ -37,8 +37,8 @@ const AnimatedNavLink = ({ to, label, onClick }) => {
 				transition={{ duration: 0.3, ease: "easeInOut" }}
 			>
 				{label}
-			</MotionNavLink>
-		</div>
+			</motion.div>
+		</MotionNavLink>
 	);
 };
 
