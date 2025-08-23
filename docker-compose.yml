@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  arcrobot_front:
+    container_name: arcrobot_front
+    image: arcrobot_front:latest
+    restart: on-failure
+    build:
+      context: . # Context will be the project root
+      dockerfile: ./Dockerfile
+      args:
+        version: 1.0.0-SNAPSHOT
+    ports:
+      - "5173:5173"
