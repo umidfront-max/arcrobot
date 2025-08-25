@@ -91,7 +91,7 @@ function CatalogId() {
 			<p className="font-inter-600 text-[150px] max-xl:text-[120px] max-sm:leading-[60px] max-lg:text-[80px] max-md:text-[54px] tracking-tighter">
 				{catalog.name}
 			</p>
-			<div className="my-6 max-w-[640px]">
+			<div className="my-6 max-w-[800px] mx-auto">
 				<Swiper
 					modules={[Thumbs]}
 					initialSlide={0}

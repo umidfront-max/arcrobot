@@ -35,9 +35,9 @@ const HeroContact = () => {
 			reason: "",
 		});
 	};
-   const allowedChars = /^[0-9()+\- ]*$/;
+	const allowedChars = /^[0-9()+\- ]*$/;
 
-   return (
+	return (
 		<div className="w-full bg-white text-black pt-10">
 			<div className="container1 pt-16 sm:pt-24 lg:pt-32">
 				<TextFade className="flex flex-col justify-between">
@@ -98,26 +98,47 @@ const HeroContact = () => {
 										/>
 									</div>
 									<div>
-										<div className="mt-1 flex items-baseline border-b border-[#cccccc] focus-within:border-black transition-colors">
-											<input
-												id="phone_number"
-												name="phone_number"
-												value={formData.phone_number}
-												onChange={(e) => {
-													const val = e.target.value;
-													// faqat ruxsat etilgan belgilar bo‘lsa yozamiz:
-													if (allowedChars.test(val)) {
+										<div>
+											<div className="mt-1 flex items-baseline border-b border-[#cccccc] focus-within:border-black transition-colors">
+												<input
+													id="phone_number"
+													name="phone_number"
+													value={formData.phone_number}
+													type="tel"
+													placeholder="Ваш телефон*"
+													required
+													className="block w-full bg-transparent pb-3 text-lg focus:outline-none"
+													onInput={(e) => {
+														let value = e.target.value.replace(
+															/\D/g,
+															""
+														); // faqat raqamlar
+														if (value.startsWith("7")) {
+															value = value.slice(1); // boshida 7 bo‘lsa olib tashlaymiz
+														}
+
+														let formatted = "+7";
+														if (value.length > 0)
+															formatted +=
+																" (" + value.substring(0, 3);
+														if (value.length >= 4)
+															formatted +=
+																") " + value.substring(3, 6);
+														if (value.length >= 7)
+															formatted +=
+																"-" + value.substring(6, 8);
+														if (value.length >= 9)
+															formatted +=
+																"-" + value.substring(8, 10);
+
+														e.target.value = formatted;
 														setFormData({
 															...formData,
-															phone_number: val,
+															phone_number: formatted,
 														});
-													}
-												}}
-												type="tel"
-												placeholder="Ваш телефон*"
-												required
-												className="block w-full bg-transparent pb-3 text-lg focus:outline-none"
-											/>
+													}}
+												/>
+											</div>
 										</div>
 									</div>
 									<div>

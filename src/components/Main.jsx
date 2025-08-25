@@ -38,7 +38,7 @@ const App = () => {
 					autoPlay
 					muted
 					playsInline
-					preload="auto"
+					preload="metadata"
 					poster="https://framerusercontent.com/images/LIUgHfwhVCUI2oVdHOrVujGRmzI.jpg"
 					className="absolute rounded-3xl w-full h-full object-cover"
 				/>

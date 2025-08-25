@@ -23,13 +23,13 @@ export default function FirstHand() {
 						<img
 							src="https://framerusercontent.com/images/x7maGMOMYjALd7wVmyOlxhCzGSw.png?scale-down-to=512"
 							alt=""
-							className="w-[110px] h-[110px] transition-all duration-500 group-hover:h-[170px] group-hover:w-[170px] rounded-lg"
+							className="w-32 h-32 transition-all duration-500 group-hover:h-48 group-hover:w-48 rounded-lg"
 						/>
 						<div className="bg-black w-5 h-5 transition-all duration-500 group-hover:rotate-180 text-white rounded-full flex items-center justify-center">
 							<span className="font-inter-600 pb-[3px] pr-[1px]">+</span>
 						</div>
 					</div>
-					<div className="p-5 pt-2 max-lg:pt-8 max-sm:px-2">
+					<div className="p-2 py-4 max-lg:pt-8 max-sm:px-2">
 						<p className="text-xs text-[#090909] relative bottom-3  transition-all duration-500 group-hover:bottom-0">
 							2 февраля 2025 г.
 						</p>
@@ -46,7 +46,7 @@ export default function FirstHand() {
 				<div className="w-full group flex flex-col justify-between p-2.5 bg-white rounded-xl">
 					<div className="w-full flex justify-between ">
 						<img
-							className="w-[110px] h-[110px] transition-all duration-500 group-hover:h-[170px] group-hover:w-[170px] rounded-lg"
+							className="w-32 h-32 transition-all duration-500 group-hover:h-48 group-hover:w-48 rounded-lg"
 							src="https://framerusercontent.com/images/0aHjr9cjDhAxgtoH3ALQbwjzh3E.png"
 							alt=""
 						/>
@@ -54,7 +54,7 @@ export default function FirstHand() {
 							<span className="font-inter-600 pb-[3px] pr-[1px]">+</span>
 						</div>
 					</div>
-					<div className="p-5  max-lg:pt-8 max-sm:px-2">
+					<div className="p-2 py-4 max-lg:pt-8 max-sm:px-2">
 						<p className="text-xs text-[#090909] relative bottom-3  transition-all duration-500 group-hover:bottom-0">
 							2 февраля 2025 г.
 						</p>
@@ -68,7 +68,7 @@ export default function FirstHand() {
 						</p>
 					</div>
 				</div>
-				<div className="col-span-2 relative h-[550px] max-md:h-[450px]">
+				<div className="col-span-2 relative h-[450px] max-md:h-[450px]">
 					<img
 						src="https://framerusercontent.com/images/6vnqmQMi6uDlYAZJNvlSLQIKI.png"
 						srcSet="

@@ -38,7 +38,7 @@ const App = () => {
 	return (
 		<div className="px-3 overflow-hidden max-xl:px-1 max-md:p-0">
 			<div
-				style={{ height: "150vh" }}
+				style={{ height: "120%" }}
 				className="relative w-full max-lg:!h-auto rounded-2xl max-sm:rounded-none overflow-hidden text-white font-sans"
 			>
 				{/* Video fon */}
@@ -48,7 +48,7 @@ const App = () => {
 					autoPlay
 					muted
 					playsInline
-					preload="auto"
+					preload="metadata"
 					poster="https://framerusercontent.com/images/LIUgHfwhVCUI2oVdHOrVujGRmzI.jpg"
 					className="absolute w-full h-full object-cover"
 					style={{
@@ -61,11 +61,11 @@ const App = () => {
 				/>
 
 				{/* Qorong'u overlay */}
-				<div className="absolute inset-0 bg-black/60 z-10"></div>
+				<div className="absolute inset-0 bg-black/60"></div>
 
 				{/* Kontent */}
-				<div className="container1">
-					<div className="grid grid-cols-2 max-lg:grid-cols-1 z-10 text-center relative top-40 max-xl:top-0 max-lg:mt-9">
+				<div className="container1 relative my-20 max-md:my-10">
+					<div className="grid grid-cols-2 max-lg:grid-cols-1  text-center max-lg:mt-9">
 						<div className="mt-16 lg:mt-0 bg-white p-8 max-sm:p-5 rounded-2xl mr-12 max-xl:mr-6 max-lg:m-0 ">
 							<p className="text-xl text-left font-inter-600 text-[#0a0a0a]">
 								arcrobot
@@ -132,19 +132,42 @@ const App = () => {
 										<input
 											id="phone_number"
 											name="phone_number"
-											value={formData.phone_number}
 											type="tel"
-											onChange={(e) =>
+											required
+											value={formData.phone_number}
+											onInput={(e) => {
+												let value = e.target.value.replace(
+													/\D/g,
+													""
+												); // faqat raqamlar
+												if (value.startsWith("7")) {
+													value = value.slice(1); // agar 7 bilan boshlangan bo‘lsa, olib tashlaymiz
+												}
+
+												let formatted = "+7";
+												if (value.length > 0)
+													formatted +=
+														" (" + value.substring(0, 3);
+												if (value.length >= 4)
+													formatted +=
+														") " + value.substring(3, 6);
+												if (value.length >= 7)
+													formatted += "-" + value.substring(6, 8);
+												if (value.length >= 9)
+													formatted +=
+														"-" + value.substring(8, 10);
+
+												e.target.value = formatted;
 												setFormData({
 													...formData,
-													phone_number: e.target.value,
-												})
-											}
-											required
-											placeholder="+7 999 999 99 99"
-											className="mt-1 block w-full text-black bg-transparent bg-[#f8f8f8] rounded-lg p-3 text-lg focus:outline-none focus:border-black transition-colors"
+													phone_number: formatted,
+												});
+											}}
+											placeholder="+7 (___) ___-__-__"
+											className="mt-1 block w-full text-black bg-[#f8f8f8] rounded-lg p-3 text-lg focus:outline-none focus:border-black transition-colors"
 										/>
 									</div>
+
 									<div className="flex flex-col items-start !mt-4">
 										<label
 											htmlFor="message"
@@ -262,11 +285,11 @@ const App = () => {
 											Понятные следующие шаги
 										</span>
 									</div>
-										<p className="mt-4 max-sm:text-[12px] text-white/70 font-inter-500">
-											После обсуждения вы получите
-											технико-коммерческое предложение с
-											3D-сценарием, сроками и стоимостью проекта.
-										</p>
+									<p className="mt-4 max-sm:text-[12px] text-white/70 font-inter-500">
+										После обсуждения вы получите технико-коммерческое
+										предложение с 3D-сценарием, сроками и стоимостью
+										проекта.
+									</p>
 								</div>
 							</div>
 							<div className="bg-white max-xl:mt-0 text-black p-4 max-md:w-max px-6 rounded-xl shadow-lg mb-4 w-max mt-4">

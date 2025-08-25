@@ -61,10 +61,11 @@ function Blog() {
 						key={item.id}
 						className={`${
 							index === 0
-								? "col-span-2 h-[550px] max-md:h-[450px]"
+								? "col-span-2 h-[470px] max-md:h-[450px]"
 								: "w-full"
-						} group overflow-hidden transition-all relative rounded-xl bg-white`}
-					>
+						} group overflow-hidden cursor-pointer transition-all relative rounded-xl bg-white`}
+               >
+                  
 						{index === 0 ? (
 							<>
 								<img
@@ -73,7 +74,7 @@ function Blog() {
 									className={`${
 										index === 0
 											? "absolute transition-all duration-500 group-hover:blur-sm group-hover:scale-110 top-0 left-0 rounded-xl object-cover h-full w-full"
-											: "w-[110px] h-[110px] transition-all duration-500 group-hover:h-[170px] group-hover:w-[170px] rounded-lg"
+											: "w-32 h-32 transition-all duration-500 group-hover:h-48 group-hover:w-48 rounded-lg"
 									}`}
 								/>
 
@@ -95,7 +96,7 @@ function Blog() {
 										<img
 											src={item.images?.[0]}
 											alt=""
-											className="w-[110px] h-[110px] transition-all duration-500 group-hover:h-[170px] group-hover:w-[170px] rounded-lg"
+											className="w-32 h-32 transition-all duration-500 group-hover:h-48 group-hover:w-48 rounded-lg"
 										/>
 									</div>
 									<div className="bg-black w-5 h-5 transition-all duration-500 group-hover:rotate-180 text-white rounded-full flex items-center justify-center">
