@@ -161,8 +161,8 @@ function CatalogId() {
 					breakpoints={{
 						0: {
 							slidesPerView: 5,
-                  },
-                  400: {
+						},
+						400: {
 							slidesPerView: 6,
 						},
 						557: {
@@ -231,7 +231,10 @@ function CatalogId() {
 				<h2 className="text-2xl max-sm:text-xl font-inter-700 mb-4 tracking-tighter">
 					{catalog.title}
 				</h2>
-				<p dangerouslySetInnerHTML={{ __html: catalog.description }} className="mb-6 whitespace-pre-line"></p>
+				<p
+					dangerouslySetInnerHTML={{ __html: catalog.description }}
+					className="mb-6 whitespace-pre-line"
+				></p>
 				<div className="mt-8">
 					<h3 className="font-semibold text-[17px] text-black/70 mb-1">
 						Технические характеристики:
@@ -251,6 +254,16 @@ function CatalogId() {
 								))}
 							</tbody>
 						</table>
+					</div>
+					<div className="grid grid-cols-3 gap-4 my-6 max-md:grid-cols-2 max-sm:grid-cols-1">
+						{catalog.other_images.map((img, i) => (
+							<img
+								key={i}
+								src={img}
+								alt={`image-${i}`}
+								className="w-full h-72 max-lg:h-56 bg-cover rounded-lg object-cover"
+							/>
+						))}
 					</div>
 				</div>
 			</section>

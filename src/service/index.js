@@ -36,6 +36,16 @@ export async function getCatalog_API() {
       return [error, null]
    }
 }
+
+export async function getWorker_API() {
+   try {
+      const response = await axiosInstance.get(`/worker`)
+
+      return [null, response.data]
+   } catch (error) {
+      return [error, null]
+   }
+}
 export async function getCatalogId_API(id) {
    try {
       const response = await axiosInstance.get(`/catalog/${id}`)
