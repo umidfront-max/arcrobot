@@ -256,7 +256,7 @@ function CatalogId() {
 						</table>
 					</div>
 					<div className="grid grid-cols-3 gap-4 my-6 max-md:grid-cols-2 max-sm:grid-cols-1">
-						{catalog.other_images.map((img, i) => (
+						{catalog?.other_images && catalog.other_images.map((img, i) => (
 							<img
 								key={i}
 								src={img}
