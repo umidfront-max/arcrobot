@@ -91,7 +91,7 @@ function CatalogId() {
 			<p className="font-inter-600 text-[150px] max-xl:text-[120px] max-sm:leading-[60px] max-lg:text-[80px] max-md:text-[54px] tracking-tighter">
 				{catalog.name}
 			</p>
-			<div className="my-6 max-w-[800px] mx-auto">
+			<div className="my-6 max-w-full mx-auto">
 				<Swiper
 					modules={[Thumbs]}
 					initialSlide={0}
@@ -110,7 +110,7 @@ function CatalogId() {
 							<img
 								src={img}
 								alt={`main-${i}`}
-								className="!rounded-xl w-[700px] object-con"
+								className="!rounded-xl w-full object-con"
 							/>
 
 							{/* Markerlar */}
@@ -175,7 +175,7 @@ function CatalogId() {
 							<img
 								src={img}
 								alt={`thumb-${i}`}
-								className={`w-full h-16 max-sm:h-12 object-cover rounded-lg border-2 cursor-pointer transition-all duration-200 ${
+								className={`w-full h-24 max-sm:h-12 object-cover rounded-lg border-2 cursor-pointer transition-all duration-200 ${
 									activeIndex === i
 										? "swiper-slide-thumb-active1"
 										: "border-white"

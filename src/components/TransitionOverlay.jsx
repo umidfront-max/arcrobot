@@ -72,7 +72,7 @@ const TransitionOverlay = () => {
 						initial="initial"
 						animate="animate"
 					>
-						{location.pathname === "/" && text.map((char, i) => (
+						{ text.map((char, i) => (
 							<motion.span
 								key={i}
 								custom={i}
