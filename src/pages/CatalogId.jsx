@@ -106,43 +106,13 @@ function CatalogId() {
 						}}
 						className="rounded-3xl overflow-hidden"
 					>
-						{catalog.images.map((img, i) => (
+						{catalog.images?.map((img, i) => (
 							<SwiperSlide className="!rounded-xl relative" key={i}>
 								<img
 									src={img}
 									alt={`main-${i}`}
-									className="!rounded-xl w-full object-con"
+									className="!rounded-xl w-full aspect-[16/9] object-cover"
 								/>
-
-								{/* Markerlar */}
-								{activeIndex === i &&
-									points.map((p, idx) => (
-										<div
-											key={p.id}
-											onClick={() => {
-												setActivePoint(p);
-												setModalOpen(true);
-											}}
-											style={{
-												position: "absolute",
-												top: `${p.top}%`,
-												left: `${p.left_pos}%`,
-												transform: "translate(-50%,-50%)",
-												background: "red",
-												color: "white",
-												borderRadius: "50%",
-												width: 24,
-												height: 24,
-												display: "flex",
-												justifyContent: "center",
-												alignItems: "center",
-												fontWeight: "bold",
-												cursor: "pointer",
-											}}
-										>
-											{idx + 1}
-										</div>
-									))}
 							</SwiperSlide>
 						))}
 					</Swiper>
@@ -171,7 +141,7 @@ function CatalogId() {
 							},
 						}}
 					>
-						{catalog.images.map((img, i) => (
+						{catalog.images?.map((img, i) => (
 							<SwiperSlide key={i} className="flex justify-center">
 								<img
 									src={img}
@@ -259,15 +229,46 @@ function CatalogId() {
 							</table>
 						</div>
 						<div className="grid grid-cols-3 gap-4 my-6 max-md:grid-cols-2 max-sm:grid-cols-1">
-							{catalog?.other_images &&
-								catalog.other_images.map((img, i) => (
+							{catalog?.images_data?.map((item, i) => (
+								<div
+									key={i}
+									className="relative w-full h-72 max-lg:h-56"
+								>
 									<img
-										key={i}
-										src={img}
+										src={item.image_url}
 										alt={`image-${i}`}
-										className="w-full h-72 max-lg:h-56 bg-cover rounded-lg object-cover"
+										className="w-full h-full rounded-lg object-cover"
 									/>
-								))}
+
+									{item.positions?.map((p, idx) => (
+										<div
+											key={p.id}
+											onClick={() => {
+												setActivePoint(p);
+												setModalOpen(true);
+											}}
+											style={{
+												position: "absolute",
+												top: `${p.top}%`,
+												left: `${p.left_pos}%`,
+												transform: "translate(-50%, -50%)",
+												background: "red",
+												color: "white",
+												borderRadius: "50%",
+												width: 24,
+												height: 24,
+												display: "flex",
+												justifyContent: "center",
+												alignItems: "center",
+												fontWeight: "bold",
+												cursor: "pointer",
+											}}
+										>
+											{idx + 1}
+										</div>
+									))}
+								</div>
+							))}
 						</div>
 					</div>
 				</section>
