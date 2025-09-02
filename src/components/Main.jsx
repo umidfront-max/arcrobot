@@ -33,13 +33,13 @@ const App = () => {
 			>
 				{/* Video fon */}
 				<video
-					src="https://framerusercontent.com/assets/98SDvcnyTK5dKmpSPxzkuMRB2I.mp4"
+					src="/bg.mp4"
 					loop
 					autoPlay
 					muted
 					playsInline
 					preload="metadata"
-					poster="https://framerusercontent.com/images/LIUgHfwhVCUI2oVdHOrVujGRmzI.jpg"
+					poster="/bg.avif" // agar poster ham public papkada bo‘lsa
 					className="absolute rounded-3xl w-full h-full object-cover"
 				/>
 
@@ -71,7 +71,10 @@ const App = () => {
 								<p className="text-sm text-left text-gray/70 font-inter-600">
 									Начните автоматизацию уже сегодня
 								</p>
-								<Link to={'/contact'} className="flex justify-start items-start mt-6">
+								<Link
+									to={"/contact"}
+									className="flex justify-start items-start mt-6"
+								>
 									<motion.button
 										whileHover="hover"
 										initial="rest"

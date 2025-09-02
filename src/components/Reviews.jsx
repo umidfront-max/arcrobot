@@ -21,12 +21,7 @@ const testimonials = [
 	},
 ];
 
-const avatarImages = [
-	"https://framerusercontent.com/images/QNFgap7Ric7c600zjgb7SwwQuc.png",
-	"https://framerusercontent.com/images/tzesjCUyqcIM5JyKObVgGrsPw9Q.png",
-	"https://framerusercontent.com/images/aZTbgRPJqpfYezqygrk0bdEvlPg.png",
-	"https://framerusercontent.com/images/KB2pGwkwRrrUj3lqUkcCBJeBJw.png",
-];
+const avatarImages = ["/p1.avif", "/p2.avif", "/p3.avif", "/p4.avif"];
 const Reviews = () => {
 	return (
 		<div className="bg-gray-100 min-h-screen container1 py-16">

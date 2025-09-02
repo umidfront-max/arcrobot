@@ -43,13 +43,13 @@ const App = () => {
 			>
 				{/* Video fon */}
 				<video
-					src="https://framerusercontent.com/assets/98SDvcnyTK5dKmpSPxzkuMRB2I.mp4"
+					src="/bg.mp4"
 					loop
 					autoPlay
 					muted
 					playsInline
 					preload="metadata"
-					poster="https://framerusercontent.com/images/LIUgHfwhVCUI2oVdHOrVujGRmzI.jpg"
+					poster="bg.avif"
 					className="absolute w-full h-full object-cover"
 					style={{
 						cursor: "auto",

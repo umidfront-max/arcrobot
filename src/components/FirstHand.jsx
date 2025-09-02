@@ -21,7 +21,7 @@ export default function FirstHand() {
 				<div className="w-full group flex flex-col justify-between p-2.5 bg-white rounded-xl">
 					<div className="flex w-full justify-between ">
 						<img
-							src="https://framerusercontent.com/images/x7maGMOMYjALd7wVmyOlxhCzGSw.png?scale-down-to=512"
+							src="a1.avif"
 							alt=""
 							className="w-32 h-32 transition-all duration-500 group-hover:h-48 group-hover:w-48 rounded-lg"
 						/>
@@ -47,7 +47,7 @@ export default function FirstHand() {
 					<div className="w-full flex justify-between ">
 						<img
 							className="w-32 h-32 transition-all duration-500 group-hover:h-48 group-hover:w-48 rounded-lg"
-							src="https://framerusercontent.com/images/0aHjr9cjDhAxgtoH3ALQbwjzh3E.png"
+							src="a2.avif"
 							alt=""
 						/>
 						<div className="bg-black w-5 h-5 transition-all duration-500 group-hover:rotate-180 text-white rounded-full flex items-center justify-center">
@@ -70,13 +70,12 @@ export default function FirstHand() {
 				</div>
 				<div className="col-span-2 relative h-[450px] max-md:h-[450px]">
 					<img
-						src="https://framerusercontent.com/images/6vnqmQMi6uDlYAZJNvlSLQIKI.png"
+						src="/q1.avif"
 						srcSet="
-    https://framerusercontent.com/images/6vnqmQMi6uDlYAZJNvlSLQIKI.png?scale-down-to=512 512w,
-    https://framerusercontent.com/images/6vnqmQMi6uDlYAZJNvlSLQIKI.png?scale-down-to=1024 1024w,
-    https://framerusercontent.com/images/6vnqmQMi6uDlYAZJNvlSLQIKI.png 1920w
+    q512.avif?scale-down-to=512 512w,
+    /q1.avif
   "
-						sizes="(max-width: 768px) 512px, (max-width: 1024px) 1024px, 1920px"
+						sizes="(max-width: 768px) 512px"
 						alt=""
 						className="absolute top-0 left-0 rounded-xl object-cover h-full"
 						style={{ objectPosition: "30.4% 58.7%" }}

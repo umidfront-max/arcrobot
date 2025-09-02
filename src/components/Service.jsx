@@ -6,11 +6,7 @@ const data = [
 	{
 		id: "001",
 		title: "Роботизация под ключ",
-		images: [
-			"https://framerusercontent.com/images/LeyCcPa8Qe4a6XJpGfCApKP5NYg.png",
-			"https://framerusercontent.com/images/ABnNffj7fcH6JcecFxlOD04qJA.png",
-			"https://framerusercontent.com/images/4GGgrckaKoRKvg5Cx3wLlLrwyQg.png",
-		],
+		images: ["/b4.avif", "/b2.avif", "/b3.avif"],
 		content:
 			"Мы берем на себя весь цикл: от подбора робота под вашу задачу до запуска оборудования на вашем производстве",
 		advantages: [
@@ -23,11 +19,7 @@ const data = [
 	{
 		id: "002",
 		title: "Инжиниринг и 3D-моделирование",
-		images: [
-			"https://framerusercontent.com/images/Q9d6XBhbcf6Qsh8X3m8sw1pRrU.png",
-			"https://framerusercontent.com/images/hbH8h6IZhREOplkDDsGlmBkfxs.png",
-			"https://framerusercontent.com/images/9Ivy806kq1uOG8FBVDkHZi30o.png",
-		],
+		images: ["/c3.webp", "/c2.webp", "/c1.webp"],
 		content:
 			"Создаем точные 3D модели и цифровые двойники, чтобы вы заранее увидели, как будет работать система",
 		advantages: [
@@ -40,11 +32,7 @@ const data = [
 	{
 		id: "003",
 		title: "Гарантия и поддержка",
-		images: [
-			"https://framerusercontent.com/images/Q9d6XBhbcf6Qsh8X3m8sw1pRrU.png",
-			"https://framerusercontent.com/images/hbH8h6IZhREOplkDDsGlmBkfxs.png",
-			"https://framerusercontent.com/images/9Ivy806kq1uOG8FBVDkHZi30o.png",
-		],
+		images: ["/c3.webp", "/c2.webp", "/c1.webp"],
 		content:
 			"Создаем точные 3D модели и цифровые двойники, чтобы вы заранее увидели, как будет работать система",
 		advantages: [

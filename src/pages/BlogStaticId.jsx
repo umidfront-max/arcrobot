@@ -14,10 +14,7 @@ const blogDatas = [
 			name: "Денис Иванов",
 			role: "Менеджер по внедрению сварочных ячеек",
 		},
-		images: [
-			"https://framerusercontent.com/images/x7maGMOMYjALd7wVmyOlxhCzGSw.png",
-			"https://framerusercontent.com/images/W2QaDhWr0I8xztw91yf8vJGqyIw.png",
-		],
+		images: ["/a1.avif", "/a2.avif"],
 		content: {
 			section1:
 				"Ручная сварка всегда зависит от человека: опыта, усталости, концентрации. Один и тот же сварщик может варить идеально — а завтра с браком. Робот даёт другое: повторяемость, точность и контроль. Это стабильность, на которую можно опереться.",
@@ -69,10 +66,7 @@ const blogDatas = [
 			name: "Денис Иванов",
 			role: "Менеджер по внедрению сварочных ячеек",
 		},
-		images: [
-			"https://framerusercontent.com/images/x7maGMOMYjALd7wVmyOlxhCzGSw.png",
-			"https://framerusercontent.com/images/W2QaDhWr0I8xztw91yf8vJGqyIw.png",
-		], 
+		images: ["/a1.avif", "/a2.avif"],
 		content: {
 			section1:
 				"На современном производстве важны не только точность и качество. Время — это деньги. Роботизированная сварка ускоряет процесс на 30–50%, исключая человеческий фактор и простои.",
@@ -138,10 +132,7 @@ const blogDatas = [
 			name: "Денис Иванов",
 			role: "Менеджер по внедрению сварочных ячеек",
 		},
-		images: [
-			"https://framerusercontent.com/images/x7maGMOMYjALd7wVmyOlxhCzGSw.png",
-			"https://framerusercontent.com/images/W2QaDhWr0I8xztw91yf8vJGqyIw.png",
-		],
+		images: ["/a1.avif", "/a2.avif"],
 		content: {
 			section1:
 				"Ручная сварка всегда зависит от человека: опыта, усталости, концентрации. Один и тот же сварщик может варить идеально — а завтра с браком. Робот даёт другое: повторяемость, точность и контроль. Это стабильность, на которую можно опереться.",
@@ -195,10 +186,7 @@ const blogDatas = [
 			name: "Денис Иванов",
 			role: "Менеджер по внедрению сварочных ячеек",
 		},
-		images: [
-			"https://framerusercontent.com/images/x7maGMOMYjALd7wVmyOlxhCzGSw.png",
-			"https://framerusercontent.com/images/W2QaDhWr0I8xztw91yf8vJGqyIw.png",
-		],
+		images: ["/a1.avif", "/a2.avif"],
 		content: {
 			intro: "Сварочный робот — это не расход, а инвестиция. Он уменьшает издержки уже с первого месяца: экономия на зарплате, снижение брака, рост производительности. В статье — конкретные цифры и пример расчёта.",
 			section1: "Экономия затрат — как робот снижает расходы на сварку",

@@ -46,10 +46,8 @@ const BurgerMenuWithModal = ({ isOpen, setIsOpen, closeMenu }) => {
 
 	// Iconlarni keyiga qarab bog‘lab beramiz (name => icon)
 	const icons = {
-		telegram:
-			"https://framerusercontent.com/images/6XWmE2hB6SujmGKLzRcUn4KcW4.png",
-		whatsapp:
-			"https://framerusercontent.com/images/UL6OADrwUbVpS53GJJmA3yohw8.svg",
+		telegram: "/tg.avif",
+		whatsapp: "/ws.svg",
 	};
 
 	return (

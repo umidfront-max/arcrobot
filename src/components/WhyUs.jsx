@@ -36,22 +36,22 @@ const AnimatedBlock = ({ children, direction = "left" }) => {
 function WhyUs() {
 	const sections = [
 		{
-			image: "https://framerusercontent.com/images/nhowdQPYODnYt5UrcS2gdZlkr4I.png",
+			image: "/a1.avif",
 			title: "Стабильное качество",
 			text: "Робот варит строго по заданной траектории — без отклонений и ошибок, свойственных человеку. Это обеспечивает стабильное и высокое качество сварных швов при каждом повторении операции.",
 		},
 		{
-			image: "https://framerusercontent.com/images/W2QaDhWr0I8xztw91yf8vJGqyIw.png",
+			image: "/a2.avif",
 			title: "Быстрая сварка",
 			text: "Скорость сварки выше в 3 раза по сравнению с ручным трудом. Робот не устает, не делает перерывов и работает с максимальной эффективностью в любое время суток.",
 		},
 		{
-			image: "https://framerusercontent.com/images/4AZjOe95ExXdClnjzfZkXoN62o.png",
+			image: "/a3.avif",
 			title: "Быстрый запуск",
 			text: "Робота не нужно нанимать, обучать и вводить в должность. После первоначальной настройки он готов к работе и может приступить к выполнению задач в тот же день.",
 		},
 		{
-			image: "https://framerusercontent.com/images/M94WCZE6zKMl6pGAL2nQvwBgA0.png",
+			image: "/a4.avif",
 			title: "Экономия затрат",
 			text: "Нет расходов на зарплаты, налоги, переработки, больничные и другие издержки, связанные с человеческим трудом. Робот — это одноразовая инвестиция с долгосрочной выгодой.",
 		},
