@@ -64,7 +64,7 @@ const App = () => {
 				<div className="absolute inset-0 bg-black/60"></div>
 
 				{/* Kontent */}
-				<div className="container1 relative my-20 max-md:my-10">
+				<div className="container1 relative my-20 max-md:my-10 max-sm:!mx-0">
 					<div className="grid grid-cols-2 max-lg:grid-cols-1  text-center max-lg:mt-9">
 						<div className="mt-16 lg:mt-0 bg-white p-8 max-sm:p-5 rounded-2xl mr-12 max-xl:mr-6 max-lg:m-0 ">
 							<p className="text-xl text-left font-inter-600 text-[#0a0a0a]">

@@ -27,7 +27,7 @@ const Solutions = () => {
 			<section className="py-20" id="projects">
 				<div className="container1 mx-auto">
 					<div className="grid lg:grid-cols-2 gap-2">
-						{catalog.map((project, index) => (
+						{catalog.slice(0,2).map((project, index) => (
 							<CatalogCard key={index} project={project} index={index} />
 						))}
 					</div>
