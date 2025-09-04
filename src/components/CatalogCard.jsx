@@ -11,8 +11,8 @@ const CatalogCard = ({ project, index }) => {
 
 	const handleClick = () => {
 		const slug = project.name.toLowerCase().replace(/\s+/g, "-");
-		navigate(`/catalog/${slug}`, {
-			state: { id: project.id }, // bu yerda id ketadi
+		navigate(`/catalog/${project.id}`, {
+			state: { id: slug }, // bu yerda id ketadi
 		});
 	};
 

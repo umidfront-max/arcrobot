@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams, useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import BtnAnimation from "../components/BtnAnimation";
 import Form from "../components/Form";
 import axios from "axios";
@@ -11,8 +11,6 @@ import "swiper/css/thumbs";
 
 function CatalogId() {
 	const { slug } = useParams();
-	const location = useLocation();
-	const id = location.state?.id;
 
 	const [catalog, setCatalog] = useState({
 		name: "",
@@ -36,7 +34,7 @@ function CatalogId() {
 	}, []);
 
 	const fetchCatalog = async () => {
-		const [error, response] = await getCatalogId_API(id);
+		const [error, response] = await getCatalogId_API(slug);
 		if (error) {
 			console.error("Xatolik:", error);
 			return;

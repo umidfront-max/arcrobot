@@ -24,7 +24,7 @@ const testimonials = [
 const avatarImages = ["/p1.avif", "/p2.avif", "/p3.avif", "/p4.avif"];
 const Reviews = () => {
 	return (
-		<div className="bg-gray-100 min-h-screen container1 py-16">
+		<div className="bg-gray-100 container1 py-16">
 			<div className="grid grid-cols-4 max-sm:grid-cols-1">
 				{/* Why Us */}
 				<div className="flex gap-2">

@@ -11,8 +11,6 @@ function Catalog() {
    
       const fetchCatalog = async () => {
          const [error, response] = await getCatalog_API();
-            console.log('response', response.data);
-            
          if (error) {
             console.error("Xatolik:", error);
             return;
