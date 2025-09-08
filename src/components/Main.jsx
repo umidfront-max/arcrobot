@@ -19,7 +19,7 @@ const App = () => {
 	useEffect(() => {
 		console.log(window.innerWidth);
 
-		if (window.innerWidth < 1280) {
+		if (window.innerWidth < 1180) {
 			setUseAnimation(false);
 		}
 	}, []);
@@ -49,15 +49,15 @@ const App = () => {
 				{/* Kontent */}
 				<div className="relative z-10 h-full text-center px-4 max-md:px-2">
 					<div className="flex justify-between flex-wrap">
-						<div className="pt-[8%] max-xl:pt-[6%] max-md:pt-[10%] max-sm:px-2 pl-12 max-md:pl-3">
-							<h1 className="text-[216px] max-sm:text-[90px] max-xs:text-[70px] max-xl:text-[200px] max-sm:px-0 max-sm:text-start max-lg:text-[140px] max-md:pl-3 tracking-tighter font-inter-600 leading-none font-inter">
+						<div className="pt-[8%] max-xl:pt-[6%] max-md:pt-[10%] max-sm:px-2 pl-12 max-xl:pl-8 max-md:pl-3">
+							<h1 className="text-[216px]  max-sm:text-[90px] max-xs:text-[70px] max-xl:text-[160px]  max-sm:px-0 max-sm:text-start max-lg:text-[140px] max-md:pl-3 tracking-tighter font-inter-600 leading-none font-inter">
 								arcrobot
 							</h1>
 							<h2 className="text-[44px] max-sm:text-lg max-xl:text-3xl max-md:text-start max-ms:m-0 tracking-tighter text-end mr-12 font-inter-600 mb-6">
 								Промышленные роботы
 							</h2>
 						</div>
-						<div className="pt-[12%] max-xl:pt-0 max-xl:-mt-6 max-md:w-full max-xl:pl-6 max-md:mt-4 pr-24 max-md:px-4">
+						<div className="pt-[12%] max-[1077px]:pt-0 max-xl:-mt-6 max-md:w-full max-xl:pl-6 max-md:mt-4 pr-24 max-md:px-4">
 							<div className="grid justify-items-end max-xl:mb-12 gap-1 text-left text-base font-inter-600 mt-3 md:text-lg mb-24">
 								<p>Подбор робота под ваши задачи</p>
 								<p>3D-визуализация проекта</p>

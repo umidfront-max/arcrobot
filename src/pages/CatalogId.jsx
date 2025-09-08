@@ -4,10 +4,11 @@ import BtnAnimation from "../components/BtnAnimation";
 import Form from "../components/Form";
 import axios from "axios";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Thumbs } from "swiper/modules";
+import { Thumbs, Navigation } from "swiper/modules";
 import { getCatalogId_API } from "../service";
 import "swiper/css";
 import "swiper/css/thumbs";
+import "swiper/css/navigation";
 
 function CatalogId() {
 	const { slug } = useParams();
@@ -72,9 +73,9 @@ function CatalogId() {
 	};
 
 	const handleSlideChange = (swiper) => {
-		setActiveIndex(swiper.activeIndex);
+		setActiveIndex(swiper.realIndex);
 		setPoints([]); // <-- eski nuqtalarni tozalab turamiz
-		fetchPointsForSlide(swiper.activeIndex);
+		fetchPointsForSlide(swiper.realIndex);
 	};
 
 	const specs = Object.entries(catalog.property || {}).map(
@@ -90,17 +91,30 @@ function CatalogId() {
 				<p className="font-inter-600 text-[150px] max-xl:text-[120px] max-sm:leading-[60px] max-lg:text-[80px] max-md:text-[54px] tracking-tighter">
 					{catalog.name}
 				</p>
-				<div className="my-6 max-w-full mx-auto">
+				<div className="my-6 max-w-full relative mx-auto">
+					<button className="swiper-button-prev-custom max-md:hidden absolute top-[44%] text-2xl left-3 z-10 w-10 h-10 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black transition">
+						‹
+					</button>
+					<button className="swiper-button-next-custom max-md:hidden absolute top-[44%] text-2xl right-3 z-10 w-10 h-10 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black transition">
+						›
+					</button>
 					<Swiper
-						modules={[Thumbs]}
+						modules={[Thumbs, Navigation]}
 						initialSlide={0}
+						loopedSlides={catalog.images.length} // 🔥 thumb bilan sinxron qilish uchun
+						watchSlidesProgress={true}
 						onSwiper={setMainSwiper}
 						onSlideChange={handleSlideChange}
+						loop={true}
 						thumbs={{
 							swiper:
 								thumbsSwiper && !thumbsSwiper.destroyed
 									? thumbsSwiper
 									: null,
+						}}
+						navigation={{
+							prevEl: ".swiper-button-prev-custom",
+							nextEl: ".swiper-button-next-custom",
 						}}
 						className="rounded-3xl overflow-hidden"
 					>
@@ -121,6 +135,7 @@ function CatalogId() {
 							setThumbsSwiper(swiper);
 							swiper.slideTo(0);
 						}}
+						loop={true}
 						initialSlide={0}
 						spaceBetween={10}
 						watchSlidesProgress
