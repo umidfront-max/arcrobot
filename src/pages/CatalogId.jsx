@@ -198,7 +198,34 @@ function CatalogId() {
 						</div>
 					</div>
 				)}
+				<div className="flex max-md:flex-col  justify-center items-center gap-4 md:gap-8 bg-white p-4 rounded-full max-md:rounded shadow-sm">
+					{/* Narx */}
+					<div className="flex items-center gap-2">
+						<span className="text-green-500 text-xl text-green">₽</span>
+						<span className="font-semibold">
+							Цена:{" "}
+							<span className="font-bold">от {catalog.price?.toLocaleString()} рублей</span> с
+							НДС
+						</span>
+					</div>
 
+					{/* Yetkazib berish */}
+					<div className="flex items-center gap-2">
+						<span className="text-blue-500 text-xl">🚚</span>
+						<span className="font-semibold">
+							Доставка : в течение {catalog.delivery_days} дней
+						</span>
+					</div>
+
+					{/* Joriy etish */}
+					<div className="flex items-center gap-2">
+                  {/* <span className="text-orange-500 text-xl">🛠</span> */}
+                  <img className="h-5 w-5" src="/wrench.png" alt="" />
+						<span className="font-semibold">
+							Срок внедрения: {catalog.delivery_days} рабочих дня
+						</span>
+					</div>
+				</div>
 				<div className="flex justify-center mt-20 mb-10">
 					<BtnAnimation className="max-sm:hidden" />
 					<button className="relative max-sm:w-full hidden max-sm:block max-sm:text-sm bg-black text-white rounded-full h-[58px] px-8 font-inter-600">
@@ -210,7 +237,7 @@ function CatalogId() {
 					<div className="w-5 h-5 pb-[3px] rounded-full text-white bg-black flex justify-center items-center text-sm font-semibold">
 						+
 					</div>
-					<p>Серия PRO</p>
+					<p>{catalog.subtitle}</p>
 				</div>
 
 				<section className="py-6 text-black">

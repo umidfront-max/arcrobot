@@ -43,6 +43,12 @@ const CatalogCard = ({ project, index }) => {
 					</div>
 				</div>
 			</div>
+			<div className="flex justify-between items-center mt-2 max-sm:mb-1 max-sm:p-3  bg-white rounded-2xl max-sm:rounded-xl px-6 py-[18px]">
+				<h3 className="text-black  max-sm:text-sm font-inter-600">
+					от {(+project.price)?.toLocaleString()} руб.
+				</h3>
+				<p className="font-inter-600">{project.isDiscount ? 'в наличии' : 'нет в наличии'}</p>
+			</div>
 		</div>
 	);
 };

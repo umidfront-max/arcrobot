@@ -94,7 +94,10 @@ const HeroContact = () => {
 												dangerouslySetInnerHTML={{
 													__html: worker.worker_type,
 												}}
-											/>
+                                 />
+                                 <p className="font-medium text-xs text-[#808080] mt-1">
+												{worker.description}
+											</p>
 										</div>
 									</div>
 								</div>

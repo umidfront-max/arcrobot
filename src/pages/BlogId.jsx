@@ -69,8 +69,11 @@ function BlogId() {
 					<p className="font-inter-500 max-md:text-sm">
 						{blog.author_name}
 					</p>
-					<p className="font-inter-500 text-black/60 max-md:text-sm">
+					<p className="font-inter-500 text-black/60 text-sm">
 						{blog.author_description}
+               </p>
+               <p className="font-inter-500 text-black/60 text-sm">
+						{blog.author_phone}
 					</p>
 				</div>
 			</div>
