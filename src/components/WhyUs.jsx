@@ -102,7 +102,7 @@ function WhyUs() {
 									<img
 										src={item.image}
 										alt=""
-										className="bg-cover aspect-[5/4] rounded-3xl"
+										className="object-cover aspect-[5/4] rounded-3xl"
 									/>
 								</div>
 
