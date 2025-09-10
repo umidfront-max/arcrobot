@@ -200,18 +200,80 @@ function CatalogId() {
 				)}
 				<div className="flex max-md:flex-col  justify-center items-center gap-4 md:gap-8 bg-white p-4 rounded-full max-md:rounded shadow-sm">
 					{/* Narx */}
-					<div className="flex items-center gap-2">
-						<span className="text-green-500 text-xl text-green">₽</span>
+					<div className="flex items-center gap-1">
+						<img className="w-5" src="/p.avif" alt="" />
 						<span className="font-semibold">
 							Цена:{" "}
-							<span className="font-bold">от {catalog.price?.toLocaleString()} рублей</span> с
-							НДС
+							<span className="font-bold">
+								от {catalog.price?.toLocaleString()} рублей
+							</span>{" "}
+							с НДС
 						</span>
 					</div>
 
 					{/* Yetkazib berish */}
 					<div className="flex items-center gap-2">
-						<span className="text-blue-500 text-xl">🚚</span>
+						{/* <span className="text-blue-500 text-xl">🚚</span> */}
+                  <svg
+                     className="h-5 w-5"
+							display="block"
+							role="presentation"
+							viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M 0 13 L 0 0 L 15 0 L 15 13 Z"
+								fill="transparent"
+								height="13px"
+								id="qVXhapQSi"
+								stroke-dasharray=""
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								stroke="#29b8ff"
+								transform="translate(1 3)"
+								width="15px"
+							/>
+							<path
+								d="M 0 0 L 4 0 L 7 3 L 7 8 L 0 8 Z"
+								fill="transparent"
+								height="8px"
+								id="lUf4W9nZP"
+								stroke-dasharray=""
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								stroke="#29b8ff"
+								transform="translate(16 8)"
+								width="7px"
+							/>
+							<path
+								d="M 0 2.5 C 0 1.119 1.119 0 2.5 0 C 3.881 0 5 1.119 5 2.5 C 5 3.881 3.881 5 2.5 5 C 1.119 5 0 3.881 0 2.5 Z"
+								fill="transparent"
+								height="5px"
+								id="I3_6oPu3P"
+								stroke-dasharray=""
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								stroke="#29b8ff"
+								transform="translate(3 16)"
+								width="5px"
+							/>
+							<path
+								d="M 0 2.5 C 0 1.119 1.119 0 2.5 0 C 3.881 0 5 1.119 5 2.5 C 5 3.881 3.881 5 2.5 5 C 1.119 5 0 3.881 0 2.5 Z"
+								fill="transparent"
+								height="5px"
+								id="T_0cGXW0r"
+								stroke-dasharray=""
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								stroke="#29b8ff"
+								transform="translate(16 16)"
+								width="5px"
+							/>
+						</svg>
 						<span className="font-semibold">
 							Доставка : в течение {catalog.delivery_days} дней
 						</span>
@@ -219,8 +281,29 @@ function CatalogId() {
 
 					{/* Joriy etish */}
 					<div className="flex items-center gap-2">
-                  {/* <span className="text-orange-500 text-xl">🛠</span> */}
-                  <img className="h-5 w-5" src="/wrench.png" alt="" />
+						{/* <span className="text-orange-500 text-xl">🛠</span> */}
+						{/* <img className="h-5 w-5" src="/wrench.png" alt="" /> */}
+						<svg
+							className="h-5 w-5 fill-[#f59d40]"
+							display="block"
+							role="presentation"
+							viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M 11.701 4.304 C 11.32 4.693 11.32 5.315 11.701 5.704 L 13.301 7.304 C 13.69 7.685 14.312 7.685 14.701 7.304 L 18.471 3.534 C 19.501 5.809 19.014 8.484 17.248 10.25 C 15.482 12.016 12.807 12.503 10.531 11.474 L 3.621 18.384 C 2.793 19.212 1.45 19.212 0.621 18.384 C -0.207 17.555 -0.207 16.212 0.621 15.384 L 7.531 8.474 C 6.502 6.199 6.989 3.523 8.755 1.758 C 10.521 -0.008 13.196 -0.496 15.471 0.534 L 11.711 4.294 Z"
+								fill="transparent"
+								height="19.005131677031272px"
+								id="VmCXRiltj"
+								stroke-dasharray=""
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								stroke="#f59d40"
+								transform="translate(2.999 1.996)"
+								width="19.00513167703127px"
+							/>
+						</svg>
 						<span className="font-semibold">
 							Срок внедрения: {catalog.delivery_days} рабочих дня
 						</span>
