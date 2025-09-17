@@ -305,7 +305,7 @@ function CatalogId() {
 							/>
 						</svg>
 						<span className="font-semibold">
-							Срок внедрения: {catalog.delivery_days} рабочих дня
+							Срок внедрения: {catalog.storage_days} рабочих дня
 						</span>
 					</div>
 				</div>
