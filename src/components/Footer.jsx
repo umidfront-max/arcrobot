@@ -27,7 +27,8 @@ const Footer = () => {
 	return (
 		<footer className="font-sans text-black">
 			<div className="container1 pt-3 pb-16 max-sm:pb-10">
-				<div>
+            <div>
+               <p className="hidden">salom</p>
 					{/* Top section */}
 					<div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-8 mb-8">
 						<div>
