@@ -38,7 +38,7 @@ function BlogId() {
 	}
 
 	return (
-		<div className="container1 pt-32">
+		<div className="container1 pt-32 ">
 			{/* Sana */}
 			<p className="text-black/70">
 				{new Date(blog.createdAt).toLocaleDateString("ru-RU", {
@@ -54,7 +54,7 @@ function BlogId() {
 
 			<p className="text-black/60 my-4">{blog.subtitles}</p>
 
-			<div className="flex gap-4 items-center mt-12">
+			<div className="flex gap-4 items-center mt-12 ">
 				{blog.author_image ? (
 					<img
 						className="w-12 h-12 object-cover rounded-full"
@@ -92,10 +92,11 @@ function BlogId() {
 				</div>
 			)}
 
-			{/* HTML description */}
+         {/* HTML description */}
+         
 			{blog.description && (
 				<div
-					className="mt-10 text-black/90 leading-7"
+					className="mt-10 text-black/90 leading-7 editorr"
 					dangerouslySetInnerHTML={{ __html: blog.description }}
 				></div>
 			)}

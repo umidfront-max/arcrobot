@@ -12,6 +12,43 @@
 	border-radius: 8px; /* yumaloqligi thumbnail bilan mos */
 }
 
+.editorr h1 {
+	font-size: 30px;
+	line-height: 1.2;
+	font-family: "inter-600", cursive, sans-serif;
+	@media (max-width: 600px) {
+		font-size: 24px;
+	}
+}
+.editorr h2 {
+	margin-top: 10px;
+	font-size: 23px;
+	line-height: 1.2;
+	font-family: "inter-600", cursive, sans-serif;
+	@media (max-width: 600px) {
+		font-size: 18px;
+	}
+}
+.editorr p strong {
+	margin-top: 10px;
+   display: inline-block;
+	font-size: 22px;
+	line-height: 1.2;
+	font-family: "inter-600", cursive, sans-serif;
+	@media (max-width: 600px) {
+		font-size: 18px;
+	}
+}
+.editorr li {
+	list-style: disc;
+	margin-left: 20px;
+	color: rgba(0, 0, 0, 0.6);
+	font-size: 17px;
+	@media (max-width: 600px) {
+		font-size: 16px;
+	}
+}
+
 .transition-overlay {
 	position: fixed;
 	top: 0;
