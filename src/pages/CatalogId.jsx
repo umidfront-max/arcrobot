@@ -323,7 +323,7 @@ function CatalogId() {
 					<p>{catalog.subtitle}</p>
 				</div>
 
-				<section className="py-6 text-black">
+				<section className="py-6 text-black editorr">
 					<h2 className="text-2xl max-sm:text-xl font-inter-700 mb-4 tracking-tighter">
 						{catalog.title}
 					</h2>
