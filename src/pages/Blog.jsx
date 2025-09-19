@@ -74,12 +74,12 @@ function Blog() {
 									className={`${
 										index === 0
 											? "absolute transition-all duration-500 group-hover:blur-sm group-hover:scale-110 top-0 left-0 rounded-xl object-cover h-full w-full"
-											: "w-32 h-32 transition-all duration-500 group-hover:h-48 group-hover:w-48 rounded-lg"
+											: "w-32 h-32 transition-all object-cover duration-500 group-hover:h-48 group-hover:w-48 rounded-lg"
 									}`}
 								/>
 
 								<div className="absolute bg-black opacity-30 rounded-xl h-full w-full"></div>
-								<div className="absolute max-w-[440px] bottom-10 left-10 text-white">
+								<div className="absolute max-w-[440px] bottom-10 left-10 max-sm:left-4 text-white">
 									<p className="text-sm">
 										{new Date(item.createdAt).toLocaleDateString()}
 									</p>
@@ -90,13 +90,13 @@ function Blog() {
 								</div>
 							</>
 						) : (
-							<div className="flex flex-col justify-between p-2.5 h-full">
+							<div className="flex min-h-[470px] max-md:min-h-[366px] flex-col justify-between p-2.5 h-full">
 								<div className="flex w-full justify-between">
 									<div className="flex-shrink-0">
 										<img
 											src={item.images?.[0]}
 											alt=""
-											className="w-32 h-32 transition-all duration-500 group-hover:h-48 group-hover:w-48 rounded-lg"
+											className="w-32 h-32 object-cover transition-all duration-500 group-hover:h-48 group-hover:w-48 rounded-lg"
 										/>
 									</div>
 									<div className="bg-black w-5 h-5 transition-all duration-500 group-hover:rotate-180 text-white rounded-full flex items-center justify-center">
@@ -105,7 +105,7 @@ function Blog() {
 										</span>
 									</div>
 								</div>
-								<div className="p-5 pt-2 max-lg:pt-8">
+								<div className="p-5 pt-2 max-lg:pt-8 max-xl:px-2 max-sm:px-0 max-sm:pb-2">
 									<p className="text-xs text-[#090909] relative bottom-3 transition-all duration-500 group-hover:bottom-0">
 										{new Date(item.createdAt).toLocaleDateString()}
 									</p>
