@@ -110,7 +110,7 @@ function BlogId() {
       {/* HTML description */}
       {blog.description && (
         <div
-          className="mt-10 text-black/90 leading-7 editorr"
+          className="mt-10 text-black/90 leading-7 editorr table-wrapper"
           dangerouslySetInnerHTML={{ __html: blog.description }}
         ></div>
       )}
