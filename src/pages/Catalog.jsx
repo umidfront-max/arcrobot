@@ -33,7 +33,7 @@ function Catalog() {
 				</div>
          </div>
 			<div className="grid md:grid-cols-2 gap-2 mt-24 max-xl:mt-16 max-md:mt-8">
-				{catalog.map((project, index) => (
+				{catalog.sort((a,b)=>a.order_key-b.order_key).map((project, index) => (
 					<CatalogCard key={index} project={project} index={index} />
 				))}
 			</div>

@@ -202,7 +202,7 @@ const App = () => {
 									<p className="mt-4 text-xs text-[#808080] max-w-xs mx-auto">
 										Отправляя заявку, вы соглашаетесь на{" "}
 										<Link
-											href="/privacy-policy"
+											to={"/privacy-policy"}
 											className="underline"
 										>
 											обработку персональных данных
