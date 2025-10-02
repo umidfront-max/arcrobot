@@ -221,7 +221,7 @@ const HeroContact = () => {
 									</motion.button>
 									<p className="mt-4 text-xs text-[#808080] max-w-xs">
 										Отправляя заявку, вы соглашаетесь на{" "}
-										<Link href="/privacy-policy" className="underline">
+										<Link to={"/privacy-policy"}className="underline">
 											обработку персональных данных
 										</Link>
 									</p>

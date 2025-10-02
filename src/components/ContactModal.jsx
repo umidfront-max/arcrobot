@@ -179,7 +179,7 @@ const ContactModal = ({ isOpen, onClose }) => {
 						</div>
 						<p className="mt-4 text-xs text-[#808080]">
 							Отправляя заявку, вы соглашаетесь на{" "}
-							<Link to="/privacy-policy" className="text-black">
+							<Link to={"/privacy-policy"} className="text-black">
 								обработку персональных данных
 							</Link>
 						</p>
