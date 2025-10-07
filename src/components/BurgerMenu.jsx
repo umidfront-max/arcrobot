@@ -166,6 +166,24 @@ const BurgerMenuWithModal = ({ isOpen, setIsOpen, closeMenu }) => {
 								</Link>
 							</div>
 						</div>
+						<div className="flex absolute bottom-24 max-lg:hidden right-20 z-10  -mb-10 mt-6 gap-4 items-center justify-center">
+							{sites.map((site) => (
+								<a
+									key={site.id}
+									href={site.link}
+									target="_blank"
+									rel="noopener"
+									aria-label={`Link to ${site.name}`}
+									className="w-9 h-9 p-2 rounded-full bg-[#ebebeb] flex items-center justify-center"
+								>
+									<img
+										src={icons[site.name.toLowerCase()] || ""}
+										alt={site.name}
+										className="w-full h-full object-cover object-center rounded-full opacity-40"
+									/>
+								</a>
+							))}
+						</div>
 					</motion.div>
 				)}
 			</AnimatePresence>
